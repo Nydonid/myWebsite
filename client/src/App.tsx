@@ -6,7 +6,6 @@ import React from 'react';
 import './App.css';
 
 function App() {
-    console.log("Start succesfull") // for debug if launches
   return (
       <BrowserRouter>
         <Routes>
