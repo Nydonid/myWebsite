@@ -1,7 +1,15 @@
 import React from 'react';
 
-function Home() {
-    return <div>Welcome to Mattia's website!</div>;
+function Home(props: { disableCustomTheme?: boolean }) {
+    return (
+        <div>
+            <div>Mattias site</div>
+            <a href="/">Home</a>
+            <a href="Portfolio">Portfolio</a>
+            <a href="Recipes">Recipes</a>
+        </div>
+    );
 }
+
 
 export default Home;

@@ -8,8 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1751629978237</updated>
       <workItem from="1751629979327" duration="2470000" />
-      <workItem from="1751735891371" duration="3881000" />
+      <workItem from="1751735891371" duration="4056000" />
+      <workItem from="1751898606239" duration="2753000" />
     </task>
     <servers />
   </component>
