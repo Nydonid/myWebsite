@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio'
 import Recipes from './pages/Recipes';
 import React from 'react';
-import './App.css';
+import './output.css';
 
 function App() {
   return (

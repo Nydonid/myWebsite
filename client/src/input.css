@@ -1,4 +1,4 @@
-@import "tailwindcss";
-@tailwind base;
+@import 'tailwindcss' layer(base);
+@import 'tailwindcss';
 @tailwind utilities;
 
