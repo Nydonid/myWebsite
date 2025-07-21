@@ -1,3 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@source "./public/*.{html,js}";
+
 .App {
   text-align: center;
 }
