@@ -1,5 +1,32 @@
 @import "tailwindcss";
 @plugin "daisyui"  {
-    themes: lemonade --default, forest --prefersdark, lemonade;
+    themes: lemonade --default, forest --prefersdark, forest;
 }
 
+@layer utilities {
+    .animate-blink {
+        animation: blink 1100ms step-end infinite;
+    }
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
+    .stars-bg {
+        position: absolute;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+    .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        animation: moveStar linear infinite;
+    }
+    @keyframes moveStar {
+        from { transform: translateY(0); }
+        to { transform: translateY(100vh); }
+    }
+}
