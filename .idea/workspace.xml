@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +60,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/client/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -87,7 +98,8 @@
       <workItem from="1753347827867" duration="11879000" />
       <workItem from="1753435335778" duration="6762000" />
       <workItem from="1753475920428" duration="625000" />
-      <workItem from="1753519575188" duration="1311000" />
+      <workItem from="1753519575188" duration="10106000" />
+      <workItem from="1753608065737" duration="2874000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
-const app = express();
 
 //middleware
 app.use(cors());
@@ -14,24 +13,24 @@ app.use(express.json()); //req.body
 
 app.post("/recipes", async (req, res) => {
     try {
-        const { description } = req.body;
-        const newTodo = await pool.query(
-            "INSERT INTO todo (description) VALUES($1) RETURNING *",
-            [description]
+        const { title, ingredients, instructions, imageURLs } = req.body;
+        const newRecipe = await pool.query(
+            "INSERT INTO recipes (title, ingredients, instructions, imageURLs) VALUES($1, $2, $3, $4) RETURNING *",
+            [title, ingredients, instructions, imageURLs]
         );
-
-        res.json(newTodo.rows[0]);
+        res.json(newRecipe.rows[0]);
     } catch (err) {
         console.error(err.message);
+        res.status(500).json({ error: "Server error" });
     }
 });
 
-//get all todos
+//get all recipes
 
-app.get("/todos", async (req, res) => {
+app.get("/recipes", async (req, res) => {
     try {
-        const allTodos = await pool.query("SELECT * FROM todo");
-        res.json(allTodos.rows);
+        const allRecipes = await pool.query("SELECT * FROM recipe");
+        res.json(allRecipes.rows);
     } catch (err) {
         console.error(err.message);
     }
