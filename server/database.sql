@@ -1,4 +1,4 @@
-psql -h localhost -U myPostgres -d mydatabase --TO CONNECT TO DATABASE IN TERMINAL
+psql -h localhost -U myPostgres -d recipes_db --TO CONNECT TO DATABASE IN TERMINAL
 
 CREATE DATABASE recipes_db;
 

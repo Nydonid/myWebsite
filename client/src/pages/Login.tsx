@@ -1,8 +1,19 @@
 import { useState } from "react"; // TODO only copy paste grok
+import InputRecipe from "../components/InputRecipe";
+import EditRecipe from "../components/EditRecipe";
+import { Recipe } from "../RecipeInterface";
 
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+    const [recipe, setRecipe] = useState<Recipe>({
+        recipe_id: 0,
+        title: "",
+        ingredients: [],
+        instructions: [],
+        imageurls: [],
+    });
 
     const handleLogin = async () => {
         try {
@@ -38,6 +49,8 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>Login</button>
+            {isLoggedIn && <InputRecipe />}
+            {isLoggedIn && <EditRecipe recipe={recipe} />}
         </div>
     );
 }

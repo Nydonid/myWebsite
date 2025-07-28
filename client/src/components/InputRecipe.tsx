@@ -8,6 +8,11 @@ const InputRecipe = () => {
 
     const onSubmitForm = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (!title || !ingredients || !instructions) {
+            alert("Please fill in all required fields");
+            return;
+        }
+        const token = localStorage.getItem("token");
         try {
             const body = {
                 title,
@@ -17,7 +22,10 @@ const InputRecipe = () => {
             };
             await fetch("http://localhost:5000/recipes", { // TODO localhost sure wrong for production
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
                 body: JSON.stringify(body),
             });
             window.location.reload();

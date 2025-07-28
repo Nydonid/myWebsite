@@ -1,7 +1,6 @@
 import MyHeader from "../components/MyHeader";
 import React, { Fragment } from "react";
 import ListRecipes from "../components/ListRecipes";
-import InputRecipe from "../components/InputRecipe";
 
 function Recipes() {
     return (

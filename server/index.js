@@ -56,7 +56,7 @@ app.post("/recipes", authenticateToken, async (req, res) => {
 //get all recipes (for recipes list)
 app.get("/recipes", async (req, res) => {
     try {
-        const allRecipes = await pool.query("SELECT title, imageURLs[1] FROM recipes");
+        const allRecipes = await pool.query("SELECT recipe_id, title, imageURLs[0] FROM recipes");
         res.json(allRecipes.rows || []);
         console.log(allRecipes.rows); // TODO delete this line, for debug
     } catch (err) {
@@ -68,11 +68,10 @@ app.get("/recipes", async (req, res) => {
 app.get("/recipes/:id", async (req, res) => {
     try {
         const { id } = req.params;
-        const todo = await pool.query("SELECT * FROM recipe WHERE recipe_id = $1", [
+        const recipe = await pool.query("SELECT * FROM recipes WHERE recipe_id = $1", [
             id
         ]);
-
-        res.json(todo.rows[0] || []);
+        res.json(recipe.rows[0] || []);
     } catch (err) {
         console.error(err.message);
     }
@@ -82,10 +81,9 @@ app.get("/recipes/:id", async (req, res) => {
 app.put("/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
-        const { description } = req.body;
         const updateRecipe = await pool.query(
             "UPDATE recipe SET description = $1 WHERE recipe_id = $2",
-            [description, id]
+            [id]
         );
         res.json("Recipe.tsx was updated!");
     } catch (err) {
