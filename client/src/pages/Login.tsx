@@ -1,7 +1,7 @@
 import { useState } from "react"; // TODO only copy paste grok
 import InputRecipe from "../components/InputRecipe";
 import EditRecipe from "../components/EditRecipe";
-import { Recipe } from "../RecipeInterface";
+import { Recipe, Ingredient } from "../RecipeInterface";
 
 function Login() {
     const [username, setUsername] = useState("");
@@ -10,9 +10,11 @@ function Login() {
     const [recipe, setRecipe] = useState<Recipe>({
         recipe_id: 0,
         title: "",
-        ingredients: [],
+        prep_time: "",
+        description: "",
         instructions: [],
         imageurls: [],
+        ingredients: []
     });
 
     const handleLogin = async () => {
