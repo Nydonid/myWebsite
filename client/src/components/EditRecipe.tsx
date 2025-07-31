@@ -6,8 +6,8 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     const [title, setTitle] = useState(recipe.title);
     const [prep_time, setPrepTime] = useState(recipe.prep_time);
     const [description, setDescription] = useState(recipe.description);
-    const [instructions, setInstructions] = useState(recipe.instructions.join("; ")); // TODO runtime error about this line
-    const [imageURLs, setImageURLs] = useState(recipe.imageurls.join("; "));
+    const [instructions, setInstructions] = useState(recipe.instructions ? recipe.instructions.join("; ") : ""); // Fallback to "", as undefined couldn't be split()
+    const [imageURLs, setImageURLs] = useState(recipe.imageurls ? recipe.imageurls.join("; ") : "");
     const [ingredients, setIngredients] = useState<Ingredient[]>(recipe.ingredients);
 
     const updateRecipe = async () => {
@@ -21,7 +21,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 ingredients,
             };
             const token = localStorage.getItem("token");
-            const res = await fetch(`http://localhost:5000/recipes/${recipe.recipe_id}`, {
+            const res = await fetch(`http://localhost:5000/recipes/${recipe.recipe_id}`, { // TODO replace localhost for production
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -81,7 +81,8 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                                       onChange={(e) => setInstructions(e.target.value)}/>
                             <input type="text" className="form-control mb-2" placeholder="Image URLs (comma-separated)" value={imageURLs}
                                    onChange={(e) => setImageURLs(e.target.value)}/>
-                            {ingredients.map((ingredient, index) => (
+                            {ingredients && ingredients.length > 0 ? (
+                                ingredients.map((ingredient, index) => (
                                 <div key={index} className="mb-2">
                                     <input type="number" className="form-control mb-1" placeholder="Amount" value={ingredient.amount}
                                            onChange={(e) => handleIngredientChange(index, "amount", Number(e.target.value))}
@@ -93,7 +94,10 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                                         onChange={(e) => handleIngredientChange(index, "name", e.target.value)}
                                     />
                                 </div>
-                            ))}
+                            ))
+                            ) : (
+                                <p>No ingredients set for this recipe</p>
+                            )}
                             <button type="button" onClick={handleAddIngredient} className="btn btn-secondary mb-2">
                                 Add Ingredient
                             </button>

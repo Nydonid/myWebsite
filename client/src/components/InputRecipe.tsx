@@ -25,7 +25,7 @@ const InputRecipe = () => {
                 prep_time: prep_time || null,
                 description,
                 instructions: instructions.split(";").map((item) => item.trim()),
-                imageURLs: imageURLs.split(";").map((item) => item.trim()),
+                imageurls: imageURLs.split(";").map((item) => item.trim()),
                 ingredients,
             };
             await fetch("http://localhost:5000/recipes", { // TODO localhost sure wrong for production

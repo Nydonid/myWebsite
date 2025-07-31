@@ -39,7 +39,7 @@ app.post("/login", async (req, res) => {
 //create a recipe
 app.post("/recipes", authenticateToken, async (req, res) => {
     try {
-        const { title, prep_time, description, instructions, imageURLs } = req.body; // define attributes which can be set to push recipe to db
+        const { title, prep_time, description, instructions, imageurls, ingredients } = req.body; // define attributes which can be set to push recipe to db
         if (!title || !ingredients?.length || !instructions?.length) { // return error 400 if NOT NULL attributes are not set.
             return res.status(400).json({ error: "Title, ingredients, and instructions are required" });
         }
@@ -75,7 +75,6 @@ app.post("/recipes", authenticateToken, async (req, res) => {
         } finally {
             client.release();
         }
-
         res.json(newRecipe.rows[0]);
     } catch (err) {
         console.error(err.message);
