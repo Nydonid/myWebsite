@@ -17,6 +17,8 @@ const ListRecipes = () => {
         try {
             const response = await fetch("http://localhost:5000/recipes"); // TODO localhost sure wrong for production
             const jsonData = await response.json();
+            console.log(jsonData);
+            console.log(response);
             setRecipes(Array.isArray(jsonData) ? jsonData : []);
         } catch (err: unknown) {
             console.error(err instanceof Error ? err.message : "Unknown error");

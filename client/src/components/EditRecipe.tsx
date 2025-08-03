@@ -15,9 +15,6 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     );
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log("Recipe prop:", recipe); // Add at top of EditRecipeForm
-
-
     const onSubmitFormEdit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!title || !ingredients || !instructions) { // Additional to backend check in index.js; for required attributes in Frontend
@@ -55,7 +52,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     };
 
     const handleAddIngredient = () => {
-        setIngredients([...ingredients, { ingredient_id: 0, recipe_id: recipe.recipe_id, amount: 0, unit: "", name: "" }]); // todo maybe cause of error?
+        setIngredients([...ingredients, { ingredient_id: 0, recipe_id: recipe.recipe_id, amount: 0, unit: "", name: "" }]);
     };
 
     const handleIngredientChange = (index: number, field: string, value: string | number) => {
@@ -74,8 +71,8 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
             </button>
             {isOpen && (
                 <div className="modal modal-open" id={`editRecipeModal${recipe.recipe_id}`} tabIndex={-1} aria-labelledby="editRecipeModalLabel" aria-hidden="true">
-                    <h2 className="modal-title">Edit Recipe</h2>
-                    <article className="modal-dialog bg-white p-6 rounded-lg shadow-lg">
+                    <h2 className="text-secondary text-3xl sm:text-5xl md:text-4xl font-bold modal-title">Edit Recipe</h2>
+                    <article className="modal-dialog bg-accent-content p-10 rounded-lg shadow-lg">
                         <form className="modal-body">
                             <input type="text" className="input input-bordered w-full mb-2" placeholder="Title" value={title}
                                    onChange={(e) => setTitle(e.target.value)}/>

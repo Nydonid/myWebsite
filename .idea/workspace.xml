@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/output.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.tsx" afterDir="false" />
@@ -107,7 +104,8 @@
       <workItem from="1753878851284" duration="11072000" />
       <workItem from="1753948633891" duration="7768000" />
       <workItem from="1754137316851" duration="8161000" />
-      <workItem from="1754208642599" duration="2200000" />
+      <workItem from="1754208642599" duration="2272000" />
+      <workItem from="1754227370045" duration="3514000" />
     </task>
     <servers />
   </component>

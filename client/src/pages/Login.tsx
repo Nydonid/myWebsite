@@ -24,13 +24,18 @@ function Login() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
             });
+
             const data = await res.json();
+
             if (data.token) {
                 localStorage.setItem("token", data.token);
                 alert("Login successful!");
             } else {
                 alert("Login failed!");
             }
+
+            window.location.reload();
+
         } catch (err) {
             console.error(err);
         }
