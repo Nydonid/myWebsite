@@ -3,33 +3,11 @@ import { Link } from "react-router-dom";
 import { Recipe } from "../RecipeInterface";
 import EditRecipeForm from "./EditRecipe"
 import DeleteRecipeButton from "./DeleteRecipeButton";
+import EditRecipe from "./EditRecipe";
 
 interface ListRecipesProps {
     recipes: Recipe[];
 }
-
-const handleDelete = async ({ recipeId }: { recipeId: number }) => {
-    if (window.confirm("Are you sure you want to delete this recipe?")) {
-        try {
-            const token = localStorage.getItem("token");
-            const res = await fetch(`http://localhost:5000/recipes/${recipeId}`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-            if (res.ok) {
-                window.location.reload();
-            } else {
-                alert("Failed to delete recipe");
-            }
-        } catch (err: unknown) {
-            console.error(err instanceof Error ? err.message : "Unknown error");
-            alert("Error deleting recipe");
-        }
-    }
-};
 
 const ListRecipes = () => {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -61,9 +39,9 @@ const ListRecipes = () => {
                         )}
                     </Link>
                     {isLoggedIn && (
-                        <div className="mt-2">
-                            <EditRecipeForm recipe={recipe} />
-                            <DeleteRecipeButton recipeId={recipe.recipe_id}/>
+                        <div className="mt-2 flex gap-2">
+                            <EditRecipe recipe={recipe} />
+                            <DeleteRecipeButton recipe={recipe}/>
                         </div>
                     )}
                 </div>

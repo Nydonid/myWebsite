@@ -1,20 +1,25 @@
-const DeleteRecipeButton = ({ recipeId }: { recipeId: number }) => {
+import {Recipe} from "../RecipeInterface";
+
+const DeleteRecipeButton = ({ recipe }: { recipe: Recipe }) => {
     const handleDelete = async () => {
         if (window.confirm("Are you sure you want to delete this recipe?")) {
             try {
                 const token = localStorage.getItem("token");
-                const res = await fetch(`http://localhost:5000/recipes/${recipeId}`, {
+                const res = await fetch(`http://localhost:5000/recipes/${recipe.recipe_id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
                     },
                 });
+
                 if (res.ok) {
+                    alert("Recipe deleted successfully");
                     window.location.reload();
                 } else {
                     alert("Failed to delete recipe");
                 }
+
             } catch (err: unknown) {
                 console.error(err instanceof Error ? err.message : "Unknown error");
                 alert("Error deleting recipe");

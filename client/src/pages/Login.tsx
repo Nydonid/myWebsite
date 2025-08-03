@@ -52,7 +52,6 @@ function Login() {
             />
             <button onClick={handleLogin}>Login</button>
             {isLoggedIn && <InputRecipe />}
-            {isLoggedIn && <EditRecipe recipe={recipe} />}
         </div>
     );
 }

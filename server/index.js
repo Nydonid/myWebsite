@@ -131,12 +131,14 @@ app.put("/recipes/:id", authenticateToken, async (req, res) => {
                     [id, amount, unit || null, name]
                 );
             }
+
             await client.query("COMMIT");
             const fullRecipe = await client.query(
                 "SELECT r.*, ARRAY_AGG(ROW_TO_JSON(i)) AS ingredients FROM recipes r LEFT JOIN ingredients i ON r.recipe_id = i.recipe_id WHERE r.recipe_id = $1 GROUP BY r.recipe_id",
                 [id]
             );
             res.json(fullRecipe.rows[0] || {});
+
         } catch (err) {
             await client.query("ROLLBACK");
             throw err;
@@ -153,10 +155,10 @@ app.put("/recipes/:id", authenticateToken, async (req, res) => {
 app.delete("/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
-        const deleteRecipe = await pool.query("DELETE FROM recipe WHERE recipe_id = $1", [
+        const deleteRecipe = await pool.query("DELETE FROM recipes WHERE recipe_id = $1", [
             id
         ]);
-        res.json("Recipe was deleted!");
+        res.json(`Recipe was deleted!`);
     } catch (err) {
         console.log(err.message);
         res.status(500).json({ error: "Server error" });
