@@ -32,22 +32,33 @@ const ListRecipes = () => {
 
     return (
         <Fragment>
-            {recipes.map((recipe) => (
-                <div key={recipe.recipe_id} className="p-6 rounded-lg shadow">
+            <article className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-screen-xl mx-auto p-4 justify-items-center">
+                {recipes.map((recipe) => (
+                <div key={recipe.recipe_id} className="card bg-accent-content/10 w-96 shadow-md">
                     <Link to={`/recipes/${recipe.recipe_id}`}>
-                        <h2 className="text-xl font-semibold">{recipe.title}</h2>
-                        {recipe.imageurls && (
-                            <img src={recipe.imageurls[0]} alt={recipe.title} width="100" />
-                        )}
+                        <figure className="px-4 pt-4">
+                            {recipe.imageurls && (
+                                <img
+                                    className="rounded-lg object-cover h-48 w-fit"
+                                    src={recipe.imageurls[0]}
+                                    alt={recipe.title}
+                                />
+                            )}
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title text-lg">{recipe.title}</h2>
+                            <p className="text-secondary">{recipe.prep_time} min</p>
+                        </div>
                     </Link>
                     {isLoggedIn && (
-                        <div className="mt-2 flex gap-2">
+                        <div className="card-actions justify-end p-4">
                             <EditRecipe recipe={recipe} />
-                            <DeleteRecipeButton recipe={recipe}/>
+                            <DeleteRecipeButton recipe={recipe} />
                         </div>
                     )}
                 </div>
-            ))}
+                ))}
+            </article>
         </Fragment>
     );
 };

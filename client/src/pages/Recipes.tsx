@@ -6,10 +6,10 @@ function Recipes() {
     return (
             <>
                 <MyHeader />
-                <h1 className="text-3xl font-bold mb-4 gap-4 max-w-7xl mx-auto p-4">My Recipes</h1>
-                <main className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto p-4">
+                <h1 className="text-3xl font-bold mb-4 gap-4 max-w-7xl mx-auto p-4">Meine Rezepte</h1>
+                <main className="">
                     <Fragment>
-                        <div className="container">
+                        <div className="container mx-auto flex justify-center max-w-screen-lg">
                             <ListRecipes />
                         </div>
                     </Fragment>
