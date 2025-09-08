@@ -59,33 +59,33 @@ const InputRecipe = () => {
 
     return (
         <Fragment>
-            <h2 className="text-center mt-5">New Recipe Upload</h2>
-            <article className="modal-dialog bg-white p-6 rounded-lg shadow-lg">
+            <article className="modal-dialog bg-accent-content p-10 rounded-lg shadow-lg">
+                <h2 className="text-secondary text-3xl m-<10> sm:text-5xl md:text-4xl font-bold modal-title">New Recipe Upload</h2>
                 <form className="mt-5" onSubmit={onSubmitFormInput}>
-                    <input type="text" className="form-control mb-2" placeholder="Title" value={title}
+                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Title" value={title}
                            onChange={(e) => setTitle(e.target.value)}
                     />
-                    <input className="form-control mb-2" placeholder="Prep time" value={prep_time}
+                    <input className="input input-bordered w-full mb-2" placeholder="Prep time" value={prep_time}
                            onChange={(e) => setPrepTime(e.target.value)}
                     />
-                    <textarea className="form-control mb-2" placeholder="Description" value={description}
+                    <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Description" value={description}
                               onChange={(e) => setDescription(e.target.value)}
                     />
-                    <textarea className="form-control mb-2" placeholder="Instructions (comma-separated)" value={instructions}
+                    <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Instructions (comma-separated)" value={instructions}
                               onChange={(e) => setInstructions(e.target.value)}
                     />
-                    <input type="text" className="form-control mb-2" placeholder="Image URLs (comma-separated)" value={imageURLs}
+                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (comma-separated)" value={imageURLs}
                            onChange={(e) => setImageURLs(e.target.value)}
                     />
                     {ingredients.map((ingredient, index) => (
                         <div key={index} className="mb-2">
-                            <input type="number" className="form-control mb-1" placeholder="Amount" value={ingredient.amount}
+                            <input type="number" className="input input-bordered w-full mb-2" placeholder="Amount" value={ingredient.amount}
                                    onChange={(e) => handleIngredientChange(index, "amount", Number(e.target.value))}
                             />
-                            <input type="text" className="form-control mb-1" placeholder="Unit (e.g., g, Tassen)" value={ingredient.unit ?? ""}
+                            <input type="text" className="textarea textarea-bordered w-full mb-1" placeholder="Unit (e.g., g, Tassen)" value={ingredient.unit ?? ""}
                                    onChange={(e) => handleIngredientChange(index, "unit", e.target.value)}
                             />
-                            <input type="text" className="form-control mb-1" placeholder="Ingredient Name" value={ingredient.name}
+                            <input type="text" className="textarea textarea-bordered w-full mb-1" placeholder="Ingredient Name" value={ingredient.name}
                                    onChange={(e) => handleIngredientChange(index, "name", e.target.value)}
                             />
                         </div>

@@ -117,6 +117,11 @@ app.put("/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body;
+
+        console.log("PUT request body:", req.body);
+        console.log("Ingredients:", ingredients);
+        console.log("Image URLs:", imageurls);
+
         const client = await pool.connect();
         try {
             await client.query("BEGIN");

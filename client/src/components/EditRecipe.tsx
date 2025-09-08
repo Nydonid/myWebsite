@@ -7,7 +7,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     const [prep_time, setPrepTime] = useState(recipe.prep_time);
     const [description, setDescription] = useState(recipe.description);
     const [instructions, setInstructions] = useState(recipe.instructions ? recipe.instructions.join("; ") : ""); // Fallback to "", as undefined couldn't be split()
-    const [imageURLs, setImageURLs] = useState(recipe.imageurls ? recipe.imageurls.join("; ") : "");
+    const [imageURLs, setImageURLs] = useState(recipe.imageurls ? recipe.imageurls.join(", ") : "");
     const [ingredients, setIngredients] = useState<Ingredient[]>(
         recipe.ingredients && recipe.ingredients.length > 0
             ? recipe.ingredients
@@ -26,11 +26,11 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
 
         try {
             const body = {
-                title,
+                title: title || null,
                 prep_time: prep_time || null,
                 description: description || null,
                 instructions: instructions.split(";").map((item) => item.trim()),
-                imageurls: imageURLs.split(";").map((item) => item.trim()),
+                imageurls: imageURLs.split(",").map((item) => item.trim()),
                 ingredients,
             };
 
@@ -71,12 +71,12 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
             </button>
             {isOpen && (
                 <div className="modal modal-open" id={`editRecipeModal${recipe.recipe_id}`} tabIndex={-1} aria-labelledby="editRecipeModalLabel" aria-hidden="true">
-                    <h2 className="text-secondary text-3xl sm:text-5xl md:text-4xl font-bold modal-title">Edit Recipe</h2>
                     <article className="modal-dialog bg-accent-content p-10 rounded-lg shadow-lg">
+                        <h2 className="text-secondary text-3xl m-<10> sm:text-5xl md:text-4xl font-bold modal-title">Edit Recipe</h2>
                         <form className="modal-body">
                             <input type="text" className="input input-bordered w-full mb-2" placeholder="Title" value={title}
                                    onChange={(e) => setTitle(e.target.value)}/>
-                            <input type="number" className="input input-bordered w-full mb-2" placeholder="Prep Time (minutes)" value={prep_time}
+                            <input type="text" className="input input-bordered w-full mb-2" placeholder="Prep Time (minutes)" value={prep_time}
                                    onChange={(e) => setPrepTime(e.target.value)}/>
                             <textarea className="textarea textarea-bordered w-full mb-2" placeholder="Description" value={description}
                                       onChange={(e) => setDescription(e.target.value)}/>
