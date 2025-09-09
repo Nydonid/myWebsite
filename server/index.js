@@ -85,7 +85,7 @@ app.post("/recipes", authenticateToken, async (req, res) => {
 //get all recipes (for recipes list)
 app.get("/recipes", async (req, res) => {
     try {
-        const allRecipes = await pool.query("SELECT recipe_id, title, imageURLs FROM recipes"); // TODO find solution to pass only first image correctly
+        const allRecipes = await pool.query("SELECT recipe_id, title, prep_time, imageURLs FROM recipes"); // TODO find solution to pass only first image correctly
         res.json(allRecipes.rows || []);
     } catch (err) {
         console.error(err.message);

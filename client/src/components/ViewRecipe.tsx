@@ -27,62 +27,46 @@ function ViewRecipe() {
     console.log(recipe?.ingredients[1]);
 
     return (
-        <div className="container mx-auto max-w-4xl p-6 bg-base-200 rounded-lg shadow-lg">
-            <div className="card bg-neutral-50 border border-primary">
-                <div className="card-body grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Left: Title, Time, Description */}
-                    <div className="space-y-4">
-                        <h1 className="card-title text-3xl font-bold text-primary">{recipe.title}</h1>
-                        <p className="text-secondary">{recipe.prep_time} min</p>
-                        <p className="text-base-content">{recipe.description}</p>
-                    </div>
-                    {/* Right: First Image */}
-                    {recipe.imageurls && recipe.imageurls.length > 0 && (
-                        <figure>
-                            <img
-                                src={recipe.imageurls[0]}
-                                alt={recipe.title}
-                                className="rounded-lg object-cover w-full h-64"
-                            />
-                        </figure>
+        <div className="space-y-8 max-w-4xl mx-auto p-18 ml-[22vw]">
+            <div className="space-y-4">
+                {recipe.imageurls && recipe.imageurls.length > 0 && (
+                    <img
+                        src={recipe.imageurls[0]}
+                        alt={recipe.title}
+                        className="rounded-lg object-cover w-full hover:brightness-110 transition-filter duration-300"
+                    />
+                )}
+                <h1 className="text-3xl font-bold text-primary">{recipe.title}</h1>
+                <p className="text-secondary">{recipe.prep_time} min</p>
+                <p className="text-base-content">{recipe.description}</p>
+            </div>
+            <div className="space-y-6">
+                <h2 className="text-xl font-semibold text-primary mb-2">Zutaten:</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <ul className="list-disc list-inside space-y-2">
+                        {recipe.ingredients
+                            .filter((ingredient): ingredient is Ingredient => ingredient !== null)
+                            .map((ingredient, index) => (
+                                <li key={index} className="text-base-content">
+                                    {ingredient.amount} {ingredient.unit} {ingredient.name}
+                                </li>
+                            ))}
+                    </ul>
+                    {recipe.imageurls && recipe.imageurls.length > 1 && (
+                        <img
+                            src={recipe.imageurls[1]}
+                            alt={recipe.title}
+                            className="rounded-lg object-cover w-full hover:brightness-110 transition-filter duration-300"
+                        />
                     )}
                 </div>
-                <div className="card-body space-y-6">
-                    {/* Ingredients List */}
-                    <div>
-                        <h2 className="text-xl font-semibold text-primary mb-2">Ingredients:</h2>
-                        <ul className="list-disc list-inside space-y-2">
-                            {recipe.ingredients
-                                .filter((ingredient): ingredient is Ingredient => ingredient !== null)
-                                .map((ingredient, index) => (
-                                    <li key={index} className="text-base-content">
-                                        {ingredient.amount} {ingredient.unit} {ingredient.name}
-                                    </li>
-                                ))}
-                        </ul>
-                    </div>
-                    {/* Instructions List */}
-                    <div>
-                        <h2 className="text-xl font-semibold text-primary mb-2">Instructions:</h2>
-                        <ol className="list-decimal list-inside space-y-2">
-                            {recipe.instructions.slice(0,0).map((step, index) => (
-                                <li key={index} className="text-base-content">{step.trim()}</li>
-                            ))}
-                        </ol>
-                    </div>
-                    {/* Additional Images */}
-                    {recipe.imageurls && recipe.imageurls.length > 1 && (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {recipe.imageurls.slice(1).map((url, index) => (
-                                <img
-                                    key={index}
-                                    src={url}
-                                    alt={`Recipe image ${index + 2}`}
-                                    className="rounded-lg object-cover w-full h-64"
-                                />
-                            ))}
-                        </div>
-                    )}
+                <div>
+                    <h2 className="text-xl font-semibold text-primary mb-2">Und so wird's gemacht:</h2>
+                    <ol className="list-decimal list-inside space-y-2">
+                        {recipe.instructions.join(';').split(';').map((step, index) => (
+                            <li key={index} className="text-base-content">{step.trim()}</li>
+                        ))}
+                    </ol>
                 </div>
             </div>
         </div>
