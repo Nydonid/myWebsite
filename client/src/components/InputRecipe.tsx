@@ -59,7 +59,7 @@ const InputRecipe = () => {
 
     return (
         <Fragment>
-            <article className="modal-dialog bg-accent-content p-10 rounded-lg shadow-lg max-w-sm mx-auto">
+            <article className="modal-dialog bg-accent-content p-10 rounded-lg shadow-lg max-w-lg mx-auto">
                 <h2 className="text-secondary text-3xl m-<10> sm:text-5xl md:text-4xl font-bold modal-title">New Recipe Upload</h2>
                 <form className="mt-5" onSubmit={onSubmitFormInput}>
                     <input type="text" className="input input-bordered w-full mb-2" placeholder="Title" value={title}

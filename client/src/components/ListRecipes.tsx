@@ -32,7 +32,7 @@ const ListRecipes = () => {
         <Fragment>
             <article className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-w-screen items-stretch px-[12vw] justify-items-center">
                 {recipes.map((recipe) => (
-                    <div key={recipe.recipe_id} className="card bg-accent/4 m-4 shadow-sm transition-shadow">
+                    <div key={recipe.recipe_id} className="card bg-accent/4 dark:bg-accent/30 m-4 shadow-sm transition-shadow">
                         <Link to={`/recipes/${recipe.recipe_id}`}>
                         <figure className="px-4 pt-4">
                             {recipe.imageurls && (

@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +111,8 @@
       <workItem from="1757258291689" duration="5750000" />
       <workItem from="1757315100243" duration="12678000" />
       <workItem from="1757346145173" duration="4277000" />
+      <workItem from="1757503584018" duration="4851000" />
+      <workItem from="1757519792089" duration="1271000" />
     </task>
     <task id="LOCAL-00001" summary="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
       <option name="closed" value="true" />
