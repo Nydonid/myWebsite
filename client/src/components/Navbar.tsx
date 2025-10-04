@@ -30,7 +30,7 @@ function Navbar() {
                         </li>
                         <li>
                             <Link to="/recipes" className="flex items-center text-lg" onClick={() => setIsOpen(false)}>
-                                <CookingPot className="mr-1.5 size-5.5"/> Recipes
+                                <CookingPot className="mr-1.5 size-5.5"/> Rezepte
                             </Link>
                         </li>
                     </ul>
@@ -45,7 +45,7 @@ function Navbar() {
                     <BookCheck className="mr-1.5 size-5.5"/> Portfolio
                 </Link>
                 <Link to="/recipes" className="btn btn-ghost text-lg flex items-center">
-                    <CookingPot className="mr-1.5 size-5.5"/> Recipes
+                    <CookingPot className="mr-1.5 size-5.5"/> Rezepte
                 </Link>
             </nav>
         </>

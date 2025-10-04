@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import {IoMdHome, IoMdMenu} from "react-icons/io";
 import MyHeader from '../components/MyHeader';
 import Typewriter from '../components/Typewriter';
 import StarsBackground from '../components/StarsBackground';
@@ -18,14 +17,14 @@ function Home() {
                         <div>
                             <Typewriter />
                             <p className="text-2xl text-base-content mt-6 mb-6">
-                                Explore my portfolio and discover delicious recipes.
+                                Besuche meine Webseite und entdecke feine Rezepte.
                             </p>
                             <div className="flex justify-center gap-4">
                                 <Link to="/portfolio" className="btn btn-primary">
                                     Portfolio
                                 </Link>
                                 <Link to="/recipes" className="btn btn-secondary">
-                                    Recipes
+                                    Rezepte
                                 </Link>
                             </div>
                         </div>
