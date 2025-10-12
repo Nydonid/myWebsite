@@ -4,6 +4,12 @@ const cors = require("cors");
 const pool = require("./db");
 const jwt = require("jsonwebtoken");
 
+// USED FOR PRODUCTION_____________
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')));
+app.listen(process.env.PORT || 8080, '0.0.0.0', () => console.log(`Listening on ${process.env.PORT || 8080}`));
+// USED FOR PRODUCTION_____________
+
 require('dotenv').config();
 
 //middleware
