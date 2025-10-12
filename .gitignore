@@ -1,12 +1,13 @@
 # Node.js dependencies
 node_modules/
+/client/node_modules
+/server/node_modules
 package-lock.json
 
 # Environment variables
 .env
 
 # Build output
-/client/build/
 /client/dist/
 
 # Logs

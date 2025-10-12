@@ -3,12 +3,10 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 const jwt = require("jsonwebtoken");
+const {join} = require("node:path");
 
-// USED FOR PRODUCTION_____________
-app.use(express.static(path.join(__dirname, '../client/build')));
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')));
-app.listen(process.env.PORT || 8080, '0.0.0.0', () => console.log(`Listening on ${process.env.PORT || 8080}`));
-// USED FOR PRODUCTION_____________
+// USE THIS FOR PRODUCTION_____________MORE AT THE FILE END!
+app.use(express.static(join(__dirname, '../client/build')));
 
 require('dotenv').config();
 
@@ -176,6 +174,12 @@ app.delete("/recipes/:id", authenticateToken, async (req, res) => {
     }
 });
 
+/* USE THIS FOR DEVELOPTMENT
 app.listen(5000, () => {
     console.log("server has started on port 5000");
-});
+});*/
+
+
+// USE THIS FOR PRODUCTION; MORE AT THE TOP
+//app.get('*', (req, res) => res.sendFile(join(__dirname, '../client/build', 'index.html')));
+app.listen(process.env.PORT || 8080, '0.0.0.0', () => console.log(`Listening on ${process.env.PORT || 8080}`));
