@@ -182,4 +182,6 @@ app.listen(5000, () => {
 
 // USE THIS FOR PRODUCTION; MORE AT THE TOP
 //app.get('*', (req, res) => res.sendFile(join(__dirname, '../client/build', 'index.html')));
-app.listen(process.env.PORT || 8080, '0.0.0.0', () => console.log(`Listening on ${process.env.PORT || 8080}`));
+app.listen(process.env.PORT || 8080, '0.0.0.0', () => {
+    console.log(`Listening on ${process.env.PORT || 8080}`)
+});

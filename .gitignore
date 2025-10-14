@@ -7,9 +7,6 @@ package-lock.json
 # Environment variables
 .env
 
-# Build output
-/client/dist/
-
 # Logs
 *.log
 logs/
