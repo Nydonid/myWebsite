@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,8 @@
       <workItem from="1760340961012" duration="722000" />
       <workItem from="1760345983103" duration="1923000" />
       <workItem from="1760438837065" duration="948000" />
-      <workItem from="1760620944836" duration="132000" />
+      <workItem from="1760620944836" duration="1307000" />
+      <workItem from="1760642137125" duration="3322000" />
     </task>
     <task id="LOCAL-00001" summary="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
       <option name="closed" value="true" />
