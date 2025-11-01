@@ -14,9 +14,6 @@ const PersonalInfo= () => {
                         <p className="mb-4"><strong>🌍</strong> Silvaplana GR / Rapperswil SG, Schweiz</p>
                         <p className="mb-4"><strong>📧</strong> mattiastettler@bluewin.ch</p>
                         <div className="flex space-x-4">
-                            <a href="https://www.strava.com/athletes/160000298" target="_blank" rel="noopener noreferrer">
-                                <img className="w-6" src="strava_icon.png" alt="strava"/>
-                            </a>
                             <a href="https://www.github.com/nydonid" target="_blank" rel="noopener noreferrer">
                                 <img className="w-7" src="github-icon.png" alt="strava"/>
                             </a>
