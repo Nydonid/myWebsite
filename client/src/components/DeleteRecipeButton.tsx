@@ -5,7 +5,7 @@ const DeleteRecipeButton = ({ recipe }: { recipe: Recipe }) => {
         if (window.confirm("Are you sure you want to delete this recipe?")) {
             try {
                 const token = localStorage.getItem("token");
-                const res = await fetch(`http://localhost:5000/recipes/${recipe.recipe_id}`, {
+                const res = await fetch(`/api/recipes/${recipe.recipe_id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",

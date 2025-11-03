@@ -34,7 +34,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 ingredients,
             };
 
-            await fetch(`http://localhost:5000/recipes/${recipe.recipe_id}`, { // TODO replace localhost for production
+            await fetch(`/api/recipes/${recipe.recipe_id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

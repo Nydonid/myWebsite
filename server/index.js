@@ -8,6 +8,10 @@ require('dotenv').config();
 
 //middleware
 app.use(cors());
+app.use("/api", (req, res, next) => {
+    req.url = req.url.replace(/^\/api/, ''); // strip /api
+    app._router.handle(req, res, next);      // reuse all your routes
+});
 app.use(express.json()); //req.body
 
 // middleware to verify JWT

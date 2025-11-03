@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: myPostgres
       POSTGRES_PASSWORD: ArizonaWeltbild37
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: recipes_db
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:

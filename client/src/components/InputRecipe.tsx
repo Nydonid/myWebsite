@@ -30,7 +30,7 @@ const InputRecipe = () => {
                 ingredients,
             };
 
-            await fetch("http://localhost:5000/recipes", { // TODO localhost sure wrong for production
+            await fetch("/api/recipes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

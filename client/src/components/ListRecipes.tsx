@@ -15,7 +15,7 @@ const ListRecipes = () => {
 
     const getRecipes = async () => {
         try {
-            const response = await fetch("http://localhost:5000/recipes"); // TODO localhost sure wrong for production
+            const response = await fetch("/api/recipes");
             const jsonData = await response.json();
             setRecipes(Array.isArray(jsonData) ? jsonData : []);
         } catch (err: unknown) {

@@ -8,7 +8,7 @@ function ViewRecipe() {
 
     const getRecipe = async () => {
         try {
-            fetch(`http://localhost:5000/recipes/${id}`) // TODO localhost is sure wrong for production
+            fetch(`/api/recipes/${id}`)
                 .then((res) => res.json())
                 .then((data) => setRecipe(data))
                 .catch((err) => console.error(err));
