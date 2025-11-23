@@ -1871,6 +1871,11 @@
     overflow-y: auto;
     overscroll-behavior: contain;
   }
+  .drawer-content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    min-width: calc(0.25rem * 0);
+  }
   .float-right {
     float: right;
   }
