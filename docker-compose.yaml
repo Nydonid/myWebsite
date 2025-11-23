@@ -2,6 +2,7 @@ version: '3.8'
 services:
   traefik:
     image: traefik:v3.1
+    container_name: traefik_entrypoint
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
@@ -22,6 +23,7 @@ services:
 
   app:
     build: .
+    container_name: node_app
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
@@ -29,7 +31,7 @@ services:
       - traefik.http.routers.app.tls.certresolver=le
       - traefik.http.services.app.loadbalancer.server.port=3000
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=developtment # change for prod
       - DATABASE_URL=postgres://myPostgres:PW_HERE@db:5432/recipes_db # TODO
     depends_on:
       - db
@@ -41,6 +43,7 @@ services:
 
   db:
     image: postgres:16
+    container_name: recipes_db
     restart: always
     environment:
       POSTGRES_USER: myPostgres
