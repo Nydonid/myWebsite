@@ -7,12 +7,8 @@ const jwt = require("jsonwebtoken");
 require('dotenv').config();
 
 //middleware
-app.use(cors());
-app.use("/api", (req, res, next) => {
-    req.url = req.url.replace(/^\/api/, ''); // strip /api
-    app._router.handle(req, res, next);      // reuse all your routes
-});
 app.use(express.json()); //req.body
+app.use(cors());
 
 // middleware to verify JWT
 const authenticateToken = (req, res, next) => {
@@ -30,7 +26,7 @@ const authenticateToken = (req, res, next) => {
 //ROUTES//
 
 // Login route
-app.post("/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
     const { username, password } = req.body;
     if (username === process.env.FRONTEND_USER && password === process.env.FRONTEND_PASSWORD) { // Validate credentials (check against DB)
         const token = jwt.sign({ username }, "your_secret_key", { expiresIn: "1h" });
@@ -41,7 +37,7 @@ app.post("/login", async (req, res) => {
 });
 
 //create a recipe
-app.post("/recipes", authenticateToken, async (req, res) => {
+app.post("/api/recipes", authenticateToken, async (req, res) => {
     try {
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body; // define attributes which can be set to push recipe to db
         if (!title || !ingredients?.length || !instructions?.length) { // return error 400 if NOT NULL attributes are not set.
@@ -87,7 +83,7 @@ app.post("/recipes", authenticateToken, async (req, res) => {
 });
 
 //get all recipes (for recipes list)
-app.get("/recipes", async (req, res) => {
+app.get("/api/recipes", async (req, res) => {
     try {
         const allRecipes = await pool.query("SELECT recipe_id, title, prep_time, imageURLs FROM recipes"); // TODO find solution to pass only first image correctly
         res.json(allRecipes.rows || []);
@@ -98,7 +94,7 @@ app.get("/recipes", async (req, res) => {
 });
 
 //get a recipe (for detailled recipe view)
-app.get("/recipes/:id", async (req, res) => {
+app.get("/api/recipes/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const recipe = await pool.query(
@@ -117,7 +113,7 @@ app.get("/recipes/:id", async (req, res) => {
 });
 
 //update a recipe
-app.put("/recipes/:id", authenticateToken, async (req, res) => {
+app.put("/api/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body;
@@ -161,7 +157,7 @@ app.put("/recipes/:id", authenticateToken, async (req, res) => {
 });
 
 //delete a recipe
-app.delete("/recipes/:id", authenticateToken, async (req, res) => {
+app.delete("/api/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
         const deleteRecipe = await pool.query("DELETE FROM recipes WHERE recipe_id = $1", [

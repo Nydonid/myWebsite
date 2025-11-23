@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.f4bf6678.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.f4bf6678.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.f4bf6678.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +135,9 @@
       <workItem from="1759832081948" duration="748000" />
       <workItem from="1760010225252" duration="704000" />
       <workItem from="1760284647891" duration="1044000" />
-      <workItem from="1762198752696" duration="1714000" />
+      <workItem from="1762198752696" duration="3520000" />
+      <workItem from="1762441028758" duration="163000" />
+      <workItem from="1763914289814" duration="4678000" />
     </task>
     <task id="LOCAL-00001" summary="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
       <option name="closed" value="true" />
