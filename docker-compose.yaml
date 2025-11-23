@@ -1,25 +1,64 @@
 version: '3.8'
 services:
+  traefik:
+    image: traefik:v3.1
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.https.address=:443
+      - --certificatesresolvers.le.acme.httpchallenge=true
+      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=https
+      - --certificatesresolvers.le.acme.email=your@mail.com
+      - --certificatesresolvers.le.acme.storage=/acme.json
+    ports:
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-acme:/acme.json
+    deploy:
+      resources:
+        limits:
+          memory: 80M
+
+  app:
+    build: .
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.app.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
+      - traefik.http.routers.app.entrypoints=https
+      - traefik.http.routers.app.tls.certresolver=le
+      - traefik.http.services.app.loadbalancer.server.port=3000
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgres://myPostgres:PW_HERE@db:5432/recipes_db # TODO
+    depends_on:
+      - db
+    deploy:
+      resources:
+        limits:
+          memory: 400M
+          cpus: '1.0'
+
   db:
     image: postgres:16
     restart: always
     environment:
       POSTGRES_USER: myPostgres
-      POSTGRES_PASSWORD: ArizonaWeltbild37
+      POSTGRES_PASSWORD: pw_here
       POSTGRES_DB: recipes_db
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
 
-  pgadmin:
+  pgadmin: # remove for prod
     image: dpage/pgadmin4
     restart: always
     ports:
       - "8080:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: mattiastettler@bluewin.ch
-      PGADMIN_DEFAULT_PASSWORD: DockerPostgreSQLpw37
+      PGADMIN_DEFAULT_PASSWORD: pw here
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     depends_on:
@@ -27,4 +66,5 @@ services:
 
 volumes:
   pgdata:
+  traefik-acme:
   pgadmin-data:
