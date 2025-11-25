@@ -6,12 +6,14 @@ services:
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
-      - --entrypoints.https.address=:443
-      - --certificatesresolvers.le.acme.httpchallenge=true
-      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=https
-      - --certificatesresolvers.le.acme.email=your@mail.com
-      - --certificatesresolvers.le.acme.storage=/acme.json
+      - --entrypoints.http.address=:80 # remove later
+#      - --entrypoints.https.address=:443
+ #     - --certificatesresolvers.le.acme.httpchallenge=true
+  #    - --certificatesresolvers.le.acme.httpchallenge.entrypoint=https
+   #   - --certificatesresolvers.le.acme.email=your@mail.com
+    #  - --certificatesresolvers.le.acme.storage=/acme.json
     ports:
+      - "80:80" # remove later
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -22,17 +24,18 @@ services:
           memory: 80M
 
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: client/Dockerfile
     container_name: node_app
+    env_file:
+      - ./server/.env
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
       - traefik.http.routers.app.entrypoints=https
       - traefik.http.routers.app.tls.certresolver=le
-      - traefik.http.services.app.loadbalancer.server.port=3000
-    environment:
-      - NODE_ENV=developtment # change for prod
-      - DATABASE_URL=postgres://myPostgres:PW_HERE@db:5432/recipes_db # TODO
+      - traefik.http.services.app.loadbalancer.server.port=5000
     depends_on:
       - db
     deploy:
@@ -44,30 +47,23 @@ services:
   db:
     image: postgres:16
     container_name: recipes_db
-    restart: always
-    environment:
-      POSTGRES_USER: myPostgres
-      POSTGRES_PASSWORD: pw_here
-      POSTGRES_DB: recipes_db
+    env_file:
+      - ./server/.env
     volumes:
       - pgdata:/var/lib/postgresql/data
+    command: >
+      postgres
+      -c shared_buffers=64MB
+      -c effective_cache_size=128MB
+      -c work_mem=2MB
+      -c max_connections=40
     ports:
       - "5432:5432"
-
-  pgadmin: # remove for prod
-    image: dpage/pgadmin4
-    restart: always
-    ports:
-      - "8080:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: mattiastettler@bluewin.ch
-      PGADMIN_DEFAULT_PASSWORD: pw here
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    depends_on:
-      - db
+    deploy:
+      resources:
+        limits:
+          memory: 280M
 
 volumes:
   pgdata:
   traefik-acme:
-  pgadmin-data:

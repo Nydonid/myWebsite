@@ -20,3 +20,6 @@ logs/
 
 # OS files
 .DS_Store
+
+# Docker Compose
+docker-compose.yaml
