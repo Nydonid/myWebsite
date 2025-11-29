@@ -4,48 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/acme.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.94dbfef8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.94dbfef8.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/strava_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/strava_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupnpm">
-      <scroll-view-position x="0" y="0" />
-    </layout>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2zPPx0OLDDyCO804ZfZXQ2qAP1v" />
+  <component name="ProjectId" id="363ap7NRlCs6wllmac7Lnm0Nci1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -56,14 +54,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/client/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -71,93 +63,34 @@
       <recent name="$PROJECT_DIR$/client/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$/client/public" />
-      <recent name="$PROJECT_DIR$/client/src/pages" />
-      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-WS-252.25557.126" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="48458fda-3a65-4ce3-b285-25441173e76d" name="Changes" comment="" />
-      <created>1751629978237</created>
+      <changelist id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="" />
+      <created>1764237890497</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1751629978237</updated>
-      <workItem from="1751629979327" duration="2470000" />
-      <workItem from="1751735891371" duration="4056000" />
-      <workItem from="1751898606239" duration="2817000" />
-      <workItem from="1753099172296" duration="2773000" />
-      <workItem from="1753101999008" duration="6146000" />
-      <workItem from="1753110404083" duration="5338000" />
-      <workItem from="1753172915141" duration="7999000" />
-      <workItem from="1753192807819" duration="5483000" />
-      <workItem from="1753256387421" duration="16897000" />
-      <workItem from="1753347827867" duration="11879000" />
-      <workItem from="1753435335778" duration="6762000" />
-      <workItem from="1753475920428" duration="625000" />
-      <workItem from="1753519575188" duration="10106000" />
-      <workItem from="1753608065737" duration="14709000" />
-      <workItem from="1753695564393" duration="14398000" />
-      <workItem from="1753878851284" duration="11072000" />
-      <workItem from="1753948633891" duration="7768000" />
-      <workItem from="1754137316851" duration="8161000" />
-      <workItem from="1754208642599" duration="2272000" />
-      <workItem from="1754227370045" duration="3559000" />
-      <workItem from="1754685340553" duration="602000" />
-      <workItem from="1757092252484" duration="129000" />
-      <workItem from="1757258291689" duration="5750000" />
-      <workItem from="1757315100243" duration="12678000" />
-      <workItem from="1757346145173" duration="4277000" />
-      <workItem from="1757503584018" duration="4851000" />
-      <workItem from="1757519792089" duration="1271000" />
-      <workItem from="1757523765754" duration="165000" />
-      <workItem from="1757654441690" duration="3197000" />
-      <workItem from="1757698163130" duration="1037000" />
-      <workItem from="1757705750768" duration="413000" />
-      <workItem from="1757863771980" duration="2261000" />
-      <workItem from="1757919712940" duration="4938000" />
-      <workItem from="1757927222078" duration="3529000" />
-      <workItem from="1759564946871" duration="6188000" />
-      <workItem from="1759592342743" duration="1416000" />
-      <workItem from="1759598534951" duration="636000" />
-      <workItem from="1759599298800" duration="3681000" />
-      <workItem from="1759686010871" duration="631000" />
-      <workItem from="1759742422947" duration="1859000" />
-      <workItem from="1759832081948" duration="748000" />
-      <workItem from="1760010225252" duration="704000" />
-      <workItem from="1760284647891" duration="1044000" />
-      <workItem from="1762198752696" duration="3520000" />
-      <workItem from="1762441028758" duration="163000" />
-      <workItem from="1763914289814" duration="4678000" />
-      <workItem from="1763929292321" duration="1936000" />
-      <workItem from="1763997482902" duration="652000" />
-      <workItem from="1764064038946" duration="5163000" />
-      <workItem from="1764095626567" duration="1023000" />
+      <updated>1764237890497</updated>
+      <workItem from="1764237892579" duration="7294000" />
+      <workItem from="1764249254025" duration="22000" />
+      <workItem from="1764333325584" duration="1124000" />
+      <workItem from="1764413007592" duration="6354000" />
     </task>
-    <task id="LOCAL-00001" summary="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer">
-      <option name="closed" value="true" />
-      <created>1757338898938</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1757338898938</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -169,10 +102,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned up things, located error path of image not loading, need internet to solve." />
-    <MESSAGE value="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit tailwind properties, bug in EditRecipe or server with emtpy strings for set values couldnt be resolved, need to ask senior engineer" />
   </component>
 </project>

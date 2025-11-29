@@ -4,9 +4,14 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
+RUN npm install
 RUN npm ci
 
-COPY .. .
+COPY client .
+
+RUN npm run build
+# RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
+
 RUN npm run build
 
 # Production stage
@@ -20,10 +25,11 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 COPY --from=builder /app/build ./build
-COPY ../server/index.js ./server/index.js
+COPY server ./server
 
 EXPOSE 5000
 
 USER node
 
-CMD ["node", "../index.js"]
+CMD ["node", "server/index.js"]
+# CMD ["serve", "-s", "build"]
