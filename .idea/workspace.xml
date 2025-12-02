@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/acme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.94dbfef8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.94dbfef8.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.b08f466e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/strava_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/strava_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/acme.json" beforeDir="false" afterPath="$PROJECT_DIR$/acme.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +69,8 @@
       <workItem from="1764237892579" duration="7294000" />
       <workItem from="1764249254025" duration="22000" />
       <workItem from="1764333325584" duration="1124000" />
-      <workItem from="1764413007592" duration="6354000" />
+      <workItem from="1764413007592" duration="6408000" />
+      <workItem from="1764675087037" duration="1647000" />
     </task>
     <servers />
   </component>
