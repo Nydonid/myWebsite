@@ -1,6 +1,6 @@
 services:
   traefik:
-    image: traefik:v3.1
+    image: traefik:v3.6.2
     container_name: Traefik
     restart: unless-stopped
     command:
@@ -8,6 +8,8 @@ services:
       - --providers.docker.exposedbydefault=false
       - --entrypoints.http.address=:80
       - --entrypoints.https.address=:443
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.websecure.http.tls.certresolver=le
       - --certificatesresolvers.le.acme.httpchallenge=true
       - --certificatesresolvers.le.acme.httpchallenge.entrypoint=http
       - --certificatesresolvers.le.acme.email=mattiastettler@bluewin.ch
@@ -18,8 +20,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./acme.json:/acme.json
-    environment:
-      - DOCKER_API_VERSION=1.52
 #      resources:
 #        limits:
 #          memory: 80M
