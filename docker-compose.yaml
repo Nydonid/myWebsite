@@ -18,6 +18,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./acme.json:/acme.json
+    environment:
+      - DOCKER_API_VERSION=1.52
 #      resources:
 #        limits:
 #          memory: 80M
@@ -37,8 +39,6 @@ services:
       - traefik.http.services.app.loadbalancer.server.port=5000
     depends_on:
       - db
-    environment:
-      - DOCKER_API_VERSION=1.52
 #    deploy:
 #      resources:
 #        limits:
