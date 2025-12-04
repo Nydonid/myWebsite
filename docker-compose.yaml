@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   traefik:
     image: traefik:v3.1
@@ -38,6 +37,8 @@ services:
       - traefik.http.services.app.loadbalancer.server.port=5000
     depends_on:
       - db
+    environment:
+      - DOCKER_API_VERSION=1.52
 #    deploy:
 #      resources:
 #        limits:
