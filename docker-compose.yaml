@@ -6,6 +6,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./acme.json:/acme.json
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
@@ -17,9 +20,6 @@ services:
       - --certificatesresolvers.le.acme.httpchallenge.entrypoint=http
       - --certificatesresolvers.le.acme.email=mattiastettler@bluewin.ch
       - --certificatesresolvers.le.acme.storage=/acme.json
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./acme.json:/acme.json
 #      resources:
 #        limits:
 #          memory: 80M
@@ -34,7 +34,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
-      - traefik.http.routers.app.entrypoints=https
+      - traefik.http.routers.app.entrypoints=websecure
       - traefik.http.routers.app.tls.certresolver=le
       - traefik.http.services.app.loadbalancer.server.port=5000
     depends_on:
