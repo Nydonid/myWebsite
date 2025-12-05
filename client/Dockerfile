@@ -3,7 +3,6 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-##
 COPY package*.json ./
 
 # Client build
@@ -20,9 +19,7 @@ RUN npm run build
 #COPY client .
 
 #RUN npm run build
-# RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
-
-RUN npm run build
+RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
 
 # Production stage
 FROM node:20-alpine

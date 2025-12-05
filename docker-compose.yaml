@@ -3,20 +3,20 @@ services:
     image: traefik:v3.6.2
     container_name: Traefik
     restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
-      - --entrypoints.http.address=:80
-      - --entrypoints.https.address=:443
-      - --entrypoints.web.http.redirections.entrypoint.to=websecure
-      - --entrypoints.websecure.http.tls.certresolver=le
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      #- --entrypoints.web.http.redirections.entrypoint.to=websecure
+      #- --entrypoints.websecure.http.tls.certresolver=le
       - --certificatesresolvers.le.acme.httpchallenge=true
       - --certificatesresolvers.le.acme.httpchallenge.entrypoint=http
       - --certificatesresolvers.le.acme.email=mattiastettler@bluewin.ch
       - --certificatesresolvers.le.acme.storage=/acme.json
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./acme.json:/acme.json
