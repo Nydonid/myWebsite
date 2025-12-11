@@ -6,28 +6,23 @@ WORKDIR /app
 COPY package*.json ./
 
 # Client build
-COPY client ./client
-WORKDIR /app/client
 RUN npm ci               # installs react-scripts here
+COPY . .
 RUN npm run build
-# RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
+RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
 
 # Production stage
 FROM node:20-alpine
 
-WORKDIR /app
+# WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY package*.json ./
-RUN npm ci --only=production
+#COPY package*.json ./
+COPY --from=builder /app/build ./build
 
-COPY --from=builder /app/client/build ./build
-COPY server ./server
-
-EXPOSE 5000
+EXPOSE 80
 
 USER node
 
-CMD ["node", "server/index.js"]
-# CMD ["serve", "-s", "build"]
+CMD ["npx", "serve", "-s", "build", "-l", "80"]

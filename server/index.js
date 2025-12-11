@@ -24,7 +24,6 @@ const authenticateToken = (req, res, next) => {
 };
 
 //ROUTES//
-
 // Login route
 app.post("/api/login", async (req, res) => {
     const { username, password } = req.body;
