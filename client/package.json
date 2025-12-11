@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "npx @tailwindcss/cli -i app.css -o public/output.css"
+    "build:css": "npx @tailwindcss/cli -i src/input.css -o public/output.css"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +55,5 @@
     "daisyui": "^5.0.46",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
