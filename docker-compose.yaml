@@ -25,7 +25,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: Api
+    container_name: ApiServer
     env_file:
       - ./server/.env
     ports:
@@ -67,9 +67,9 @@ services:
       - ./server/.env
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./server/init:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
-
 volumes:
   pgdata:
   traefik-acme:
