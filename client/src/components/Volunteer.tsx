@@ -2,9 +2,9 @@
 import React from 'react';
 
 const volunteer = [
-    { period: '2019 – 2025', role: 'Abteilungsleiter J+S', organization: 'CEVI Samedan / Oberengadin', logo: 'cevi-logo.png' },
-    { period: '2015 – 2019', role: 'Leiter', organization: 'CEVI Samedan / Oberengadin', logo: 'cevi-logo.png' },
     { period: '2026 - Heute', role: 'Vorstandsmitglied', organization: 'CEVI Samedan / Oberengadin', logo: 'cevi-logo.png' },
+    { period: '2019 – 2025', role: 'Abteilungsleiter J+S', organization: 'CEVI Samedan / Oberengadin', logo: 'cevi-logo.png' },
+    { period: '2015 – 2019', role: 'Leiter', organization: 'CEVI Samedan / Oberengadin', logo: 'cevi-logo.png' }
 ];
 
 const Volunteer = () => {

@@ -23,3 +23,4 @@ logs/
 
 # Docker Compose
 docker-compose.yaml
+docker-compose-prod.yaml
