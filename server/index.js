@@ -5,12 +5,14 @@ const cors = require("cors");
 const pool = require("./db");
 const jwt = require("jsonwebtoken");
 const api = express.Router();
+const port = 5000;
 
 require('dotenv').config();
 
 //middleware
 app.use(express.json()); //req.body
 app.use(cors());
+
 
 // middleware to verify JWT
 const authenticateToken = (req, res, next) => {
@@ -26,6 +28,12 @@ const authenticateToken = (req, res, next) => {
 };
 
 //ROUTES//
+
+//get test
+api.get("/test", async (req, res) => {
+    res.send('Hello from Express');
+});
+
 // Login route
 api.post("/login", async (req, res) => {
     const { username, password } = req.body;
@@ -50,7 +58,7 @@ api.post("/recipes", authenticateToken, async (req, res) => {
         );
         const recipeId = newRecipe.rows[0].recipe_id;*/
 
-        const client = await pool.connect(); // This block only from grok to add recipes with ingredients
+        const client = await pool.connect();
         try {
             await client.query("BEGIN");
             const newRecipe = await client.query(
@@ -171,8 +179,7 @@ api.delete("/recipes/:id", authenticateToken, async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("server has started on port 5000");
-});
-
 app.use("/api", api);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server started on port ${port}`);
+})
