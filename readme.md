@@ -12,3 +12,5 @@ chown root:root /path/to/acme.json  # Or traefik user ID
 ssh connect to vm = ssh -i /home/mattia/.ssh/for_mywebsite_gcloud root@91.98.130.102
 
 in prod delete docker-compose.yaml and use docker-compose-prod.yaml
+
+https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/red_curry_ingredients.jpg    bsp link fotos

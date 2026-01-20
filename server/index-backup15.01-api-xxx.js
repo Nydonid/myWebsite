@@ -42,11 +42,11 @@ app.post("/api/recipes", authenticateToken, async (req, res) => {
     try {
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body; // define attributes which can be set to push recipe to db
         if (!title || !ingredients?.length || !instructions?.length) { // return error 400 if NOT NULL attributes are not set.
-            return res.status(400).json({ error: "Title, ingredients, and instructions are required" });
+            return res.status(400).json({ error: "Title, ingredients, and insert_recipes are required" });
         }
 /*        const newRecipe = await pool.query( // add attributes from form to db
-            "INSERT INTO recipes (title, prep_time, description, instructions, imageURLs) VALUES($1, $2, $3, $4, $5) RETURNING *",
-            [title, prep_time, description, instructions, imageURLs || []]
+            "INSERT INTO recipes (title, prep_time, description, insert_recipes, imageURLs) VALUES($1, $2, $3, $4, $5) RETURNING *",
+            [title, prep_time, description, insert_recipes, imageURLs || []]
         );
         const recipeId = newRecipe.rows[0].recipe_id;*/
 
@@ -54,7 +54,7 @@ app.post("/api/recipes", authenticateToken, async (req, res) => {
         try {
             await client.query("BEGIN");
             const newRecipe = await client.query(
-                "INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES($1, $2, $3, $4, $5) RETURNING *",
+                "INSERT INTO recipes (title, prep_time, description, insert_recipes, imageurls) VALUES($1, $2, $3, $4, $5) RETURNING *",
                 [title, prep_time, description, instructions, imageurls || []]
             );
             const recipeId = newRecipe.rows[0].recipe_id;
@@ -127,7 +127,7 @@ app.put("/api/recipes/:id", authenticateToken, async (req, res) => {
         try {
             await client.query("BEGIN");
             const updateRecipe = await client.query(
-                "UPDATE recipes SET title = $1, prep_time = $2, description = $3, instructions = $4, imageurls = $5 WHERE recipe_id = $6 RETURNING *",
+                "UPDATE recipes SET title = $1, prep_time = $2, description = $3, insert_recipes = $4, imageurls = $5 WHERE recipe_id = $6 RETURNING *",
                 [title, prep_time, description, instructions, imageurls || [], id]
             );
             await client.query("DELETE FROM ingredients WHERE recipe_id = $1", [id]);

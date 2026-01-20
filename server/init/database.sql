@@ -7,17 +7,17 @@ DROP TABLE IF EXISTS recipes;
 
 CREATE TABLE recipes (
      recipe_id SERIAL PRIMARY KEY,
-     title VARCHAR(50) NOT NULL,
+     title VARCHAR(100) NOT NULL,
      prep_time VARCHAR(15),
-     description VARCHAR(150),
-     instructions VARCHAR(400)[] NOT NULL,
-     imageurls VARCHAR(50)[] NOT NULL
+     description VARCHAR(1000),
+     instructions VARCHAR(5000)[] NOT NULL,
+     imageurls VARCHAR(500)[] NOT NULL
 );
 
 CREATE TABLE ingredients (
      ingredient_id SERIAL PRIMARY KEY,
      recipe_id INTEGER REFERENCES recipes(recipe_id) ON DELETE CASCADE,
-     amount NUMERIC NOT NULL,
-     unit VARCHAR(20),
-     name VARCHAR(50) NOT NULL
+     amount NUMERIC,
+     unit VARCHAR(100),
+     name VARCHAR(200) NOT NULL
 );
