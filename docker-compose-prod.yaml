@@ -1,0 +1,76 @@
+services:
+  traefik:
+    image: traefik:v3.6.2
+    container_name: Traefik
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./acme.json:/acme.json
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.websecure.http.tls.certresolver=le
+      - --certificatesresolvers.le.acme.httpchallenge=true
+      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.le.acme.email=mattiastettler@bluewin.ch
+      - --certificatesresolvers.le.acme.storage=/acme.json
+
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: ApiServer
+    env_file:
+      - ./server/.env
+    ports:
+      - "5000:5000"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.api.rule=(Host(`mattia.gr`) || Host(`www.mattia.gr`)) && PathPrefix(`/api`)
+      - traefik.http.routers.api.entrypoints=websecure
+      - traefik.http.routers.api.tls.certresolver=le
+
+      - traefik.http.services.api.loadbalancer.server.port=5000
+    depends_on:
+      - db
+
+  app:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: NodeApp
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nodeapp.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
+      - traefik.http.routers.nodeapp.entrypoints=websecure
+      - traefik.http.routers.nodeapp.tls.certresolver=le
+
+      - traefik.http.middlewares.redirect-https.redirectscheme.scheme=https
+      - traefik.http.routers.nodeapp.middlewares=redirect-https
+
+      - traefik.http.services.nodeapp.loadbalancer.server.port=80
+    depends_on:
+      - api
+
+  db:
+    image: postgres:16
+    container_name: RecipesDB
+    env_file:
+      - ./server/.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./server/init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+volumes:
+  pgdata:
+  traefik-acme:

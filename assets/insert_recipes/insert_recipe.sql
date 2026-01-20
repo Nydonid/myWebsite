@@ -24,11 +24,11 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
             (1, 1, NULL, 'Zwiebel'),
 
             (1, 350, 'g', 'Geschnetzeltes Rindfleisch'),
-            (1, NULL, 'Prise', 'Salz'),
-            (1, NULL, 'Prise', 'Salz'),
+            (1, NULL, 'Eine Prise', 'Salz'),
+            (1, NULL, 'Etwas', 'Pfeffer'),
             (1, 2, 'EL', 'Rote Currypaste'),
             (1, 1.5, 'dl', 'Wasser'),
             (1, 2.5, 'dl', 'Kokosmilch'),
 
             (1, 187.5, 'g', 'Parfüm- oder Basmatireis'),
-            (1, NULL, 'Doppelt so viel wie Reis', 'Wasser');
+            (1, NULL, NULL, 'Doppelt so viel Wasser wie Reis');

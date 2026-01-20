@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/recipe_images/red_curry_ingredients.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/recipe_images/red_curry_ingredients.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/recipe_images/red_curry_recipe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/recipe_images/red_curry_recipe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index-backup15.01-api-xxx.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index-backup15.01-api-xxx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/init/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/init/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +153,7 @@
       <workItem from="1768726000549" duration="9231000" />
       <workItem from="1768742712472" duration="5503000" />
       <workItem from="1768763297707" duration="4022000" />
-      <workItem from="1768913422525" duration="6218000" />
+      <workItem from="1768913422525" duration="9160000" />
     </task>
     <servers />
   </component>
