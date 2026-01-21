@@ -54,8 +54,8 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
 
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (2, 300, g, 'Spaghetti'),
-        (2, 50,  g, 'Reibkäse wie zum Bsp. Sbrinz'),
+        (2, 300, 'g', 'Spaghetti'),
+        (2, 50,  'g', 'Reibkäse wie zum Bsp. Sbrinz'),
 
         (2, 350, 'g', 'Rindshackfleisch'),
         (2, 1, 'grosse', 'Zwiebel'),
@@ -70,4 +70,40 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (2, NULL, NULL, 'Oregano, Basilikum, Thymian, gehackt'),
         (2, 1, NULL, 'Lorbeerblatt');
 
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Riz Casimir',
+        25,
+        'Ein sehr einfaches Lieblingsessen für Gross und Klein. Riz Casimir mit Äpfeln, Bananen und Aprikosenkonfitüre. Für ca. 2–3 Portionen, von Betty Bossi',
+        ARRAY[
+            'Reis im siedenden Salzwasser ca. 15 Minuten knapp weich kochen, abtropfen und dann auf tiefer Stufe warm halten.',
+            'Poulet falls nötig in ca. 2 cm breite Streifen schneiden.',
+            'Bratcrème in einer Bratpfanne erhitzen. Poulet ca. 5 Minuten braten, mit Salz, Pfeffer und Curry würzen, herausnehmen und warm stellen.',
+            'Gleichzeitig Äpfel halbieren, Kerngehäuse entfernen und in Scheiben schneiden. Bananen in kleine Stücke schneiden.',
+            'Äpfel und Bananen zu allen Seiten je ca. 1 Minuten anbraten, herausnehmen und warm stellen.',
+            '1 EL Curry in derselben Pfanne für einige Sekunden trocken andämpfen, gleich den einen dl Wasser dazugiessen und mit zugegebener Bouillon aufkochen.',
+            '1 EL Aprikosenkonfitüre, 1.5 dl Rahm und Poulet beigeben, nur noch heiss werden lassen und abschmecken.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/riz_casimir_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/riz_casimir_ingredients.jpg'
+            ]
+    );
 
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (3, 1, 'Tasse', 'Reis'),
+        (3, 2, 'Tassen', 'Salzwasser'),
+
+        (3, 300, 'g', 'Pouletbrüstli oder Geschnetzeltes'),
+        (3, 1, 'EL', 'Bratbutter oder -crème'),
+
+        (3, 2, NULL, 'Äpfel'),
+        (3, 2, NULL, 'Bananen'),
+
+        (3, 1, 'EL', 'Curry'),
+        (3, 1.5, 'dl', 'Wasser'),
+        (3, 2, 'TL', 'Bouillon'),
+        (3, 1, 'EL', 'Aprikosenkonfitüre'),
+        (3, 2, 'dl', 'Voll- oder Halbrahm'),
+        (3, NULL, NULL, 'Salz nach Bedarf'),
+        (3, NULL, NULL, 'Pfeffer nach Bedarf');
