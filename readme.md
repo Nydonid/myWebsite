@@ -14,3 +14,5 @@ ssh connect to vm = ssh -i /home/mattia/.ssh/for_mywebsite_gcloud root@91.98.130
 in prod delete docker-compose.yaml and use docker-compose-prod.yaml
 
 https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/red_curry_ingredients.jpg    bsp link fotos
+
+Set picture height to 1024px
