@@ -107,3 +107,30 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (3, 2, 'dl', 'Voll- oder Halbrahm'),
         (3, NULL, NULL, 'Salz nach Bedarf'),
         (3, NULL, NULL, 'Pfeffer nach Bedarf');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES (
+       'Thunfisch Spaghetti',
+       20,
+       'Schnelles Pasta-Gericht mit Thunfisch, optionalen Champignons und Rahm für 2-3 Portionen. Gefunden auf gutekueche.at',
+       ARRAY[
+           'Spaghetti in Salzwasser al dente kochen, Pfanne beiseite stellen wenn diese durch sind.',
+           'Thunfisch abtropfen lassen. Zwiebel und Knoblauch schälen, fein hacken und in Olivenöl andünsten.',
+           'Thunfisch und Champignons zugeben, Tomatenmark und Rahm einrühren, mit Salz und Pfeffer abschmecken und etwas einkochen lassen.',
+           'Dill und Spaghetti unterrühren, nochmals kurz erwärmen, ohne das die Sauce beginnt zu kochen.'
+           ],
+       ARRAY[]
+       );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (4, 300, 'g', 'Spaghetti'),
+        (4, 1, NULL, 'Zwiebel'),
+        (4, 1, 'Dose', 'Thunfisch'),
+        (4, 1.5, 'EL', 'Olivenöl'),
+        (4, 150, 'ml', 'Vollrahm'),
+        (4, 200, 'g', 'Champignons'),
+        (4, 2, 'EL', 'Tomatenmark'),
+        (4, 5, 'EL', 'Schnittlauch'),
+        (4, 1, 'Prise', 'Pfeffer'),
+        (4, 1, 'Prise', 'Salz'),
+        (4, 1, NULL, 'Knoblauchzehe');
+
