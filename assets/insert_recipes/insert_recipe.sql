@@ -118,7 +118,9 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
            'Thunfisch und Champignons zugeben, Tomatenmark und Rahm einrühren, mit Salz und Pfeffer abschmecken und etwas einkochen lassen.',
            'Dill und Spaghetti unterrühren, nochmals kurz erwärmen, ohne das die Sauce beginnt zu kochen.'
            ],
-       ARRAY[]
+       ARRAY[
+           'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/tuna_spaghetti_recipe.jpg',
+           'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/tuna_spaghetti_ingredients.jpg']
        );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
@@ -133,4 +135,46 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (4, 1, 'Prise', 'Pfeffer'),
         (4, 1, 'Prise', 'Salz'),
         (4, 1, NULL, 'Knoblauchzehe');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Fajitas mit Hackfleisch',
+        30,
+        'Herzhafte Fajitas mit Hackfleisch-Gemüse-Füllung, Guacamole und Cheddar. Natürlich kann für eine gute Schärfe jegliche Chilisosse zugegeben werden sowie Koriander für das gewisse Etwas. Originalrezept für 4-5 Portionen, von Betty Bossi.',
+        ARRAY[
+            'Für den effizientesten Ablauf erst nur die Peperoni in Streifen schneiden und entkernen.'
+            'Danach Öl in einer Bratpfanne erhitzen, Hackfleisch ca. 4-5 Minuten anbraten. würzen mit Salz und Pfeffer, herausnehmen. Falls nötig portionenweise.',
+            'In der Zwischenzeit noch die Zwiebel in Streifen, den Knoblauch in kleine Scheiben schneiden. Maisdose öffnen und abtropfen, Cherry-Tomaten halbieren.',
+            'Wenig Öl in die gleiche Pfanne zugeben. Peperoni, Zwiebel, Knoblauch und Mais ca. 2-3 Minuten auf hoher Stufe rührbraten.',
+            '4-5 dl Wasser zugeben, Cherry-Tomaten zusammen mit dem Fleisch beigeben. Bei kleiner Hitze ca. 15 Minuten köcheln.',
+            'Währenddessen Avocados halbieren, Fruchtfleisch mit einer Gabel zerdrücken. Limettensaft zugeben, etwas salzen.',
+            'Tortillas nach Packungsangabe erwärmen.',
+            'Tortillas mit Crème fraîche bestreichen, Fleisch-Gemüse-Mischung und Käse darauf verteilen, falten oder aufrollen.',
+            'Guacamole dazu servieren.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/fajitas_minced_meat_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/fajitas_minced_meat_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (3, 1, NULL, 'rote Peperoni'),
+        (3, 1, NULL, 'Zwiebel'),
+        (3, 1, NULL, 'Knoblauchzehe'),
+        (3, 1, 'Dose', 'Maiskörner (ca. 160 g)'),
+        (3, NULL, NULL, 'Öl zum Braten'),
+        (3, 500, 'g', 'Hackfleisch'),
+        (3, NULL, NULL, 'Salz'),
+        (3, NULL, NULL, 'Pfeffer'),
+        (3, 0.4, 'dl', 'Wasser'),
+        (3, 80, 'g', 'Cherry-Tomaten'),
+
+        (3, 2, NULL, 'Avocados'),
+        (3, 1, NULL, 'Limette'),
+
+        (3, 8, NULL, 'Weizentortillas'),
+        (3, 125, 'g', 'Cheddar'),
+        (3, 1, 'Becher', 'Crème fraîche (ca 160 g)');
+
 
