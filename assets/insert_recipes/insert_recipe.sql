@@ -159,22 +159,22 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (3, 1, NULL, 'rote Peperoni'),
-        (3, 1, NULL, 'Zwiebel'),
-        (3, 1, NULL, 'Knoblauchzehe'),
-        (3, 1, 'Dose', 'Maiskörner (ca. 160 g)'),
-        (3, NULL, NULL, 'Öl zum Braten'),
-        (3, 500, 'g', 'Hackfleisch'),
-        (3, NULL, NULL, 'Salz'),
-        (3, NULL, NULL, 'Pfeffer'),
-        (3, 0.4, 'dl', 'Wasser'),
-        (3, 80, 'g', 'Cherry-Tomaten'),
+        (5, 1, NULL, 'rote Peperoni'),
+        (5, 1, NULL, 'Zwiebel'),
+        (5, 1, NULL, 'Knoblauchzehe'),
+        (5, 1, 'Dose', 'Maiskörner (ca. 160 g)'),
+        (5, NULL, NULL, 'Öl zum Braten'),
+        (5, 500, 'g', 'Hackfleisch'),
+        (5, NULL, NULL, 'Salz'),
+        (5, NULL, NULL, 'Pfeffer'),
+        (5, 0.4, 'dl', 'Wasser'),
+        (5, 80, 'g', 'Cherry-Tomaten'),
 
-        (3, 2, NULL, 'Avocados'),
-        (3, 1, NULL, 'Limette'),
+        (5, 2, NULL, 'Avocados'),
+        (5, 1, NULL, 'Limette'),
 
-        (3, 8, NULL, 'Weizentortillas'),
-        (3, 125, 'g', 'Cheddar'),
-        (3, 1, 'Becher', 'Crème fraîche (ca 160 g)');
+        (5, 8, NULL, 'Weizentortillas'),
+        (5, 125, 'g', 'Cheddar'),
+        (5, 1, 'Becher', 'Crème fraîche (ca 160 g)');
 
 
