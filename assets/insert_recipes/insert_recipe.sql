@@ -177,4 +177,60 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (5, 125, 'g', 'Cheddar'),
         (5, 1, 'Becher', 'Crème fraîche (ca 160 g)');
 
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Original Wiener Schnitzel',
+        90,
+        'Ein wahres Festessen! Wiener Schnitzel mit knuspriger Panier, serviert mit Preiselbeer-Saucen und Altwiener Erdäpfelsalat. Originalrezepte aus austria.info und gutekueche.at. Für 2 Portionen.',
+        ARRAY[
+            'Reichlich Wasser mit einem Teelöffel Kümmel aufkochen, darin Kartoffeln für den Salat weich kochen.'
+            'Schnitzel auflegen, mit viel Kraft mit einer Pfanne dünn klopfen und beidseitig mit Salz und Pfeffer würzen. Nicht vergessen Backpapier auf die Schnitzel zu legen zum klopfen. Mehl, Brösel und verquirlte Eier jeweils auf flache Teller geben.',
+            'Schnitzel zuerst im Mehl wenden, dann durch die Eier ziehen und anschließend in den Bröseln panieren. Panier vorsichtig andrücken.',
+            'Suppe erhitzen, mit Essig, Senf und Zucker mischen. Zwiebel würfeln, in Öl glasig dünsten.',
+            'Erdäpfel abgiessen, heiss schälen und in Scheiben schneiden.',
+            'Marinade über die Kartoffeln gießen, einen guten Esslöffel warme Butter unterheben, würzen und Petersilie einmischen.',
+            'Nun muss man den Erdäpfelsalat eine gute Zeit, idealerweise über eine Stunde, ziehen lassen. Währenddessen die inzwischen wohl in Mitleidenschaft gezogene Küche aufräumen.',
+            'Für die Preiselbeer-Saucen etwas Mehl in heißer Butter anschwitzen, Preiselbeeren einrühren, optional etwas Rotwein zugeben, kurz aufkochen lassen, abschmecken.',
+            '15 min vor dem Servieren Butter oder Öl in einer großen Pfanne stark erhitzen, sodass die Schnitzel im Fett schwimmen können.',
+            'Schnitzel einlegen, wenn das Fett heiss genug ist. Testen indem reingeworfene Brösel direkt zischen. Je nach Dicke 2–3 Minuten pro Seite goldbraun backen.',
+            'Schnitzel herausheben, auf Küchenpapier abtropfen lassen und mit Zitronenscheiben servieren.',
+            'Erdäpfelsalat nochmals abschmecken und ebenfalls mit der Preiselbeer-Saucen servieren.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        -- Wiener Schnitzel
+        (6, 2, NULL, 'Kalbsschnitzel vom Metzger. (Evtl. als Schmetterling, je ca. 160g)'),
+        (6, 1, NULL, 'Ei'),
+        (6, 50, 'g', 'Mehl, bevorzugt etwas grober'),
+        (6, 50, 'g', 'Semmelbrösel'),
+        (6, NULL, 'viel', 'Butterschmalz oder Pflanzenöl'),
+        (6, NULL, NULL, 'Zitronenscheiben'),
+
+        -- Preiselbeer-Sauce
+        (6, 200, 'g', 'Preiselbeeren (60-70%, aus dem Glas)'),
+        (6, 1, 'TL', 'Mehl'),
+        (6, 1, 'TL', 'Butter'),
+
+        -- Altwiener Kartoffelsalat
+        (6, 500, 'g', 'Erdäpfel (festkochend)'),
+        (6, 1, 'TL', 'Kümmel'),
+        (6, 2, 'EL', 'Sonnenblumen- oder Rapsöl'),
+        (6, 1, 'EL', 'Butter (geschmolzen)'),
+        (6, 2, 'EL', 'Petersilie'),
+
+        -- Marinade
+        (6, 250, 'ml', 'Rindsbouillon'),
+        (6, 2, 'EL', 'Weissweinessig'),
+        (6, 1, 'EL', 'Senf'),
+        (6, 1, 'Prise', 'Zucker'),
+        (6, 1, NULL, 'rote Zwiebel'),
+        (6, NULL, NULL, 'Pfeffer'),
+        (6, NULL, NULL, 'Salz');
+
+
 
