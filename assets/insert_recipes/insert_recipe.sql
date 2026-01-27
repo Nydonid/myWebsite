@@ -197,8 +197,8 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
             'Erdäpfelsalat nochmals abschmecken und ebenfalls mit der Preiselbeer-Saucen servieren.'
             ],
         ARRAY[
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_recipe.jpg',
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_ingredients.jpg'
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_ingredients.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_recipe.jpg'
             ]
     );
 
