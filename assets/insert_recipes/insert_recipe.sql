@@ -233,4 +233,37 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (6, NULL, NULL, 'Salz');
 
 
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Hamburger',
+        30,
+        'Saftiger Burger, mit garantierter Geschmacksexplosion. Es geht ganz einfach, superdünne Pattys, dazwischen Käse, Sauce, Spiegelei und fluffy Brötchen. Dazu Pommes, für 4 Portionen. Mattia''s Selbstkreation.',
+        ARRAY[
+            'Pommes entweder in der Fritteuse oder im Backofen nach Packungsbeilage zubereiten.'
+            'Öl oder Bratfett in einer grossen Bratpfanne erhitzen, Pattys stark anbraten.',
+            'Gleich die Zwiebel in kleine Streifen schneiden, Pattys einmal wenden.',
+            'Die Spiegeleier neben den Pattys aufschlagen, dabei auf mittlere Stufe zurückstellen.',
+            'Käse erst auf die Pattys geben, anschliessend die Spiegeleier auch noch obendrauf geben.',
+            'Kurz Zwiebeln andünsten, mit den Essiggurken aufstapeln, auf kleine Stufe zurückstellen.',
+            'Die Brötchen gegen Schluss je 2-5 min anbraten, nach gewünschtem Grad.',
+            'Brötchen anrichten, mit Sauce bestreichen, ganzen Burger-Stack zusammmenstellen. In der Mitte einen Zahnstocher zum fixieren.',
+            'Gesalzene Pommes dazuservieren und mit Curry bestreuen.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/burger_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/burger_ingredients.jpg'
+            ]
+    );
 
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (7, 4, NULL, 'Hamburger-Pattys.'),
+        (7, 1, NULL, 'Zwiebel'),
+        (7, 4, NULL, 'Eier'),
+        (7, 4, 'Scheiben', 'Schmelzkäse, wie Cheddar'),
+        (7, NULL, NULL, 'Öl oder Bratfett zum Braten'),
+        (7, 4, NULL, 'Burger-Brioche, z.B. von Lidl'),
+        (7, 750, 'g', 'Pommes Frites'),
+        (7, NULL, NULL, 'Essiggurken in Scheiben'),
+        (7, NULL, NULL, 'Curry'),
+        (7, NULL, NULL, 'Salz'),
+        (7, NULL, NULL, 'Cocktailsauce, Mayo ...');
