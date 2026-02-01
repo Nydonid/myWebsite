@@ -239,7 +239,7 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
         30,
         'Saftiger Burger, mit garantierter Geschmacksexplosion. Es geht ganz einfach, superdünne Pattys, dazwischen Käse, Sauce, Spiegelei und fluffy Brötchen. Dazu Pommes, für 4 Portionen. Mattia''s Selbstkreation.',
         ARRAY[
-            'Pommes entweder in der Fritteuse oder im Backofen nach Packungsbeilage zubereiten.'
+            'Pommes entweder in der Fritteuse oder im Backofen nach Packungsbeilage zubereiten.',
             'Öl oder Bratfett in einer grossen Bratpfanne erhitzen, Pattys stark anbraten.',
             'Gleich die Zwiebel in kleine Streifen schneiden, Pattys einmal wenden.',
             'Die Spiegeleier neben den Pattys aufschlagen, dabei auf mittlere Stufe zurückstellen.',
@@ -267,3 +267,42 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (7, NULL, NULL, 'Curry'),
         (7, NULL, NULL, 'Salz'),
         (7, NULL, NULL, 'Cocktailsauce, Mayo ...');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Poulet an Paprika-Champignons-Rahmsauce',
+        35,
+        'Ein sehr feines, ausgewogenes Menu das immer richtig ist. Statt dem Poulet kann auch gut Rinds- oder Kalbsfleisch verwendet werden, soweie zusätzlich ein Rüebli. Sauce inspiriert von Swissmilk. Für 2 -3 Portionen.',
+        ARRAY[
+            'Reis im siedenden Salzwasser ca. 15 Minuten knapp weich kochen, abtropfen und dann auf tiefer Stufe warm halten.',
+            'Bratcrème in einer Bratpfanne erhitzen. Pouletfilets pro Seite 2-3 Minuten stark anbraten, mit Salz und Pfeffer würzen.',
+            'Parallel dazu die Champignons, Zwiebeln und den Knoblauch schälen, (und eventuell Rüebli) in Scheiben schneiden.',
+            'Nach den etwa 2-3 Minuten Pouletfilets auf mittlerer Stufe mit Deckel weiterbraten. Nicht zu lange, nach etwa 10min auf kleine Stufe stellen, wenn die Sauce noch nicht bereit ist.',
+            'Die Pilze in einer kleinen Pfanne für ein paar Minuten mit etwas Butter anbraten, herausnehmen.',
+            'Zwibeln und Knoblauch in der gleichen Pfanne andünsten, mit 0.5dl Wasser oder Weisswein ablöschen und die Bouillon zugeben.',
+            'Die Sauce etwas einkochen.',
+            'Restliches Wasser sowie den Rahm (je ca. 1dl) dazugiessen, auf mittlerer Stufe sämig einkochen.',
+            'Pilze und Paprika beigeben, mit Salz, Pfeffer und evtl. Zitronensaft abschmecken.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_mushroomsauce_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_mushroomsauce_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (8, 1, 'Tasse', 'Wildreis'),
+        (8, 2, 'Tassen', 'Salzwasser'),
+
+        (8, 300, 'g', 'Pouletbrüstli'),
+        (8, 1, 'EL', 'Bratbutter oder -crème'),
+
+        (8, 400, 'g', 'Champignons'),
+        (8, 1, 'kleine', 'Zwiebel'),
+        (5, 1, NULL, 'Knoblauchzehe'),
+        (8, 1, 'EL', 'Paprika'),
+        (8, 1.5, 'dl', 'Wasser'),
+        (8, 1, 'TL', 'Bouillon'),
+        (8, 1, 'dl', 'Vollrahm'),
+        (8, NULL, NULL, 'Salz nach Bedarf'),
+        (8, NULL, NULL, 'Pfeffer nach Bedarf');
