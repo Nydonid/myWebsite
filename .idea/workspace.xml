@@ -7,7 +7,8 @@
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients-fedora-safeBackup-0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +161,8 @@
       <workItem from="1769373053042" duration="1601000" />
       <workItem from="1769543889086" duration="2803000" />
       <workItem from="1769952317313" duration="2500000" />
-      <workItem from="1769971667413" duration="2094000" />
+      <workItem from="1769971667413" duration="2221000" />
+      <workItem from="1771008794111" duration="3199000" />
     </task>
     <servers />
   </component>

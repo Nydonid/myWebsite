@@ -142,7 +142,7 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
         30,
         'Herzhafte Fajitas mit Hackfleisch-Gemüse-Füllung, Guacamole und Cheddar. Natürlich kann für eine gute Schärfe jegliche Chilisosse zugegeben werden sowie Koriander für das gewisse Etwas. Originalrezept für 4-5 Portionen, von Betty Bossi.',
         ARRAY[
-            'Für den effizientesten Ablauf erst nur die Peperoni in Streifen schneiden und entkernen.'
+            'Für den effizientesten Ablauf erst nur die Peperoni in Streifen schneiden und entkernen.',
             'Danach Öl in einer Bratpfanne erhitzen, Hackfleisch ca. 4-5 Minuten anbraten. würzen mit Salz und Pfeffer, herausnehmen. Falls nötig portionenweise.',
             'In der Zwischenzeit noch die Zwiebel in Streifen, den Knoblauch in kleine Scheiben schneiden. Maisdose öffnen und abtropfen, Cherry-Tomaten halbieren.',
             'Wenig Öl in die gleiche Pfanne zugeben. Peperoni, Zwiebel, Knoblauch und Mais ca. 2-3 Minuten auf hoher Stufe rührbraten.',
@@ -306,3 +306,35 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (8, 1, 'dl', 'Vollrahm'),
         (8, NULL, NULL, 'Salz nach Bedarf'),
         (8, NULL, NULL, 'Pfeffer nach Bedarf');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Fajitas mit Poulet',
+        25,
+        'Erfrischende einfache Fajitas mit Poulet-Käse-Füllung. Für die heisse Schärfe eignet sich beispielsweise Chiliöl oder Tabasco. Originalrezept für 2-3 Portionen, von Betty Bossi und viel Kreativität.',
+        ARRAY[
+                'Zwiebel und Peperoni in feine Streifen schneiden, Käse grob reiben',
+                'Öl in einer Bratpfanne erhitzen. Poulet ca. 5 Minuten braten. Gemüse, Bohnen und Mais kurz in der Pfanne andünsten',
+                'Crème fraîche, Ketchup und Chiliöl verrühren und in einem Schälchen anrichten.',
+                'Tortillas nach Packungsangabe zubereiten.',
+                'Poulet würzen und zusammen mit Gemüse, Käse und Sauce auf den Tortillas verteilen.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_fajitas_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_fajitas_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+            (9, NULL, NULL, 'Öl zum Braten'),
+            (9, 1, 'EL', 'Ketchup'),
+            (9, 1, NULL, 'Peperoni'),
+            (9, 1, NULL, 'Zwiebel'),
+            (9, 75, 'g', 'milder Tilsiter'),
+            (9, 1, 'kleine Dose', 'Mais und Bohnen'),
+            (9, 300, 'g', 'Pouletgeschnetzeltes'),
+            (9, NULL, NULL, 'Pfeffer'),
+            (9, NULL, NULL, 'Salz'),
+            (9, 6, NULL, 'Weizentortillas'),
+            (9, NULL, NULL, 'Peterli'),
+            (9, 1, 'Becher', 'Crème fraîche (ca 160 g)');
