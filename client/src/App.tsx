@@ -4,7 +4,6 @@ import Portfolio from './pages/Portfolio'
 import Recipes from './pages/Recipes';
 import Recipe from './pages/Recipe';
 import Login from './pages/Login';
-import './output.css';
 
 function App() {
   return (

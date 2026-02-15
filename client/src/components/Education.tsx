@@ -13,20 +13,28 @@ const Education = () => {
     return (
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Ausbildung</h2>
-            <ul className="list bg-base-100/10 rounded-box">
-                {education.map((edu, index) => (
-                    <li key={index} className="list-row">
-                        <div>
-                            <img className="size-10 rounded-box" src={edu.logo} alt={edu.institution} />
-                        </div>
-                        <div>
-                            <div>{edu.period}</div>
-                            <div>{edu.degree}</div>
-                            <div className="text-xs uppercase font-semibold opacity-60">{edu.institution}</div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    <tbody>
+                    {education.map((edu, index) => (
+                        <tr key={index}>
+                            <td className="w-0">
+                                <div className="avatar">
+                                    <div className="mask mask-squircle h-12 w-12">
+                                        <img src={edu.logo} alt={edu.institution} />
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-sm opacity-60">{edu.period}</div>
+                                <div className="font-normal">{edu.degree}</div>
+                                <div className="font-light">{edu.institution}</div>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </article>
     );
 };

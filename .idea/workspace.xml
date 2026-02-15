@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="" />
+    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.e2d8aca4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.e2d8aca4.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/output.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/output.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Education.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProfessionalExperience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ProfessionalExperience.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Typewriter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Typewriter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Volunteer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Volunteer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +72,7 @@
     &quot;npm.build:css.executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/client/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -158,6 +191,8 @@
       <workItem from="1769952317313" duration="2500000" />
       <workItem from="1769971667413" duration="2221000" />
       <workItem from="1771008794111" duration="3366000" />
+      <workItem from="1771012434596" duration="137000" />
+      <workItem from="1771163536616" duration="10074000" />
     </task>
     <servers />
   </component>

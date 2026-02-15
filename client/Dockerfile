@@ -9,7 +9,6 @@ COPY package*.json ./
 RUN npm ci               # installs react-scripts here
 COPY . .
 RUN npm run build
-RUN npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
 
 # Production stage
 FROM node:20-alpine

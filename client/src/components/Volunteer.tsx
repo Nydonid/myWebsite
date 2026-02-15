@@ -11,20 +11,28 @@ const Volunteer = () => {
     return (
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Ehrenamtlich</h2>
-            <ul className="list bg-base-100/10 rounded-box">
-                {volunteer.map((vol, index) => (
-                    <li key={index} className="list-row">
-                        <div>
-                            <img className="size-10 rounded-box" src={vol.logo} alt={vol.organization} />
-                        </div>
-                        <div>
-                            <div>{vol.period}</div>
-                            <div>{vol.role}</div>
-                            <div className="text-xs uppercase font-semibold opacity-60">{vol.organization}</div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    <tbody>
+                    {volunteer.map((vol, index) => (
+                        <tr key={index}>
+                            <td className="w-0">
+                                <div className="avatar">
+                                    <div className="mask mask-squircle h-12 w-12">
+                                        <img src={vol.logo} alt={vol.organization} />
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-sm opacity-60">{vol.period}</div>
+                                <div className="font-normal">{vol.role}</div>
+                                <div className="font-light">{vol.organization}</div>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </article>
     );
 };

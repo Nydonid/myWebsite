@@ -9,15 +9,15 @@ function Typewriter() {
 
     useEffect(() => {
         const currentWord = words[index];
-        const typingSpeed = 175; // Speed for typing
-        const deletingSpeed = 125; // Speed for deleting
-        const pauseDuration = 1500; // Pause after typing/deleting
+        const typingSpeed = 175;
+        const deletingSpeed = 125;
+        const pauseDuration = 1500;
 
         const timer = setTimeout(() => {
             if (!isDeleting) { // If isDeleting is false, means word can be typed
                 if (text.length < currentWord.length) {
                     setText(currentWord.slice(0, text.length + 1));
-                } else { // Finished typing, start deleting after pause
+                } else {
                     setTimeout(() => setIsDeleting(true), pauseDuration);
                 }
             } else { // Deleting if deleting is true
@@ -35,7 +35,7 @@ function Typewriter() {
 
     return (
         <h1 className="text-primary text-4xl sm:text-7xl md:text-6xl font-bold" aria-label="Welcome Message">
-            <span aria-hidden="true">{text}</span>
+        <span aria-hidden="true">{text}</span>
             <span className="animate-blink">|</span>
         </h1>
     );

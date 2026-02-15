@@ -1,7 +1,6 @@
-@import "tailwindcss";
-@plugin "daisyui"  {
-    themes: lemonade --default, forest --prefersdark, forest;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
     .animate-blink {

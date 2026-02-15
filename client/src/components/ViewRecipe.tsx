@@ -27,7 +27,7 @@ function ViewRecipe() {
     console.log(recipe?.ingredients[1]);
 
     return (
-        <div className="space-y-8 max-w-4xl mx-auto p-18 lg:ml-[22vw]">
+        <div className="space-y-8 max-w-4xl mx-auto mt-10 ml-6 mr-6 lg:ml-[22vw]">
             <div className="space-y-4">
                 {recipe.imageurls && recipe.imageurls.length > 0 && (
                     <img
