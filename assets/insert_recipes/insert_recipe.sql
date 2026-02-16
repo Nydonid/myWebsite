@@ -338,3 +338,39 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
             (9, 6, NULL, 'Weizentortillas'),
             (9, NULL, NULL, 'Peterli'),
             (9, 1, 'Becher', 'Crème fraîche (ca 160 g)');
+
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Auberginen mit Hackfleisch',
+        60,
+        'Mega feiner Low-carb Hit mit viel Gemüse und Hackfleisch. Aus der Coop-Zeitung, für 2 Portionen. Effektive Zubereitungszeit 40 Minuten.',
+        ARRAY[
+            'Ofen auf 200°C Umluft vorheizen.',
+            'Aubergine längs in ca. 1 cm breite Streifen schneiden, auf eine mit Backpapier belegte Form legen, gleichmässig etwas Öl darübergiessen und mit einer Prise salzen.',
+            'Zum Backen 20 Minuten in der Mitte des Ofens.',
+            'Zwiebel und Knoblauch schälen, in kleine Stücke hacken. 1EL Öl in einer Bratpfanne erhitzen, das Hackfleisch für 3-4 Minuten darin anbraten; herausnehmen.',
+            'Zwiebel und Knoblauch kurz anbraten, Pelati, Tomatenmark und Kapern zugeben. Würzen, Hackfleisch auch wieder zugeben. Etwas köcheln.',
+            'Nach den 20 Minuten die Auberginen aus dem Ofen nehmen, diese mitsamt dem Papier aus der Form heben. Ofen nicht auskühlen lassen.',
+            'Eine erste Hälfte der Auberginen in die Form geben, eine Hälfte der Hackfleischmasse darübergeben. Nochmals wiederholen. Den Parmiggiano darüber bis alles schön bedeckt ist.',
+            'Die Form zum Fertigbacken nochmals für 25-30 Minuten in die Mitte des Ofens.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/eggplant_mincedmeat_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/eggplant_mincedmeat_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+            (10, NULL, NULL, 'Olivenöl'),
+            (10, 300, 'g', 'Rindshackfleisch'),
+            (10, 1, NULL, 'Aubergine'),
+            (10, 1, NULL, 'Zwiebel'),
+            (10, 400, 'g', 'Tomaten Pelati'),
+            (10, 1, NULL, 'Knoblauchzehe'),
+            (10, 1, 'EL', 'Tomatenmark'),
+            (10, 1, 'EL', 'Kapern'),
+            (10, 0.5, 'TL', 'Salz'),
+            (10, NULL, 'wenig', 'Pfeffer'),
+            (10, NULL, 'wenig', 'Orgeano'),
+            (10, 30, 'g', 'Parmiggiano');

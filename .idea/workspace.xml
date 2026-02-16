@@ -4,37 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/postcss.config.js" afterDir="false" />
+    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="added new logo.pgn pictures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.e2d8aca4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.e2d8aca4.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/453.a3c1d153.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.1be1e366.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/output.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/output.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Education.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ProfessionalExperience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ProfessionalExperience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Typewriter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Typewriter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Volunteer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Volunteer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/output.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +18,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nydonid&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nydonid/myWebsite&quot;,
+    &quot;accountId&quot;: &quot;1834a7ed-820e-4a12-9fe4-4c28d3630bbb&quot;
+  }
+}</component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -192,8 +183,26 @@
       <workItem from="1769971667413" duration="2221000" />
       <workItem from="1771008794111" duration="3366000" />
       <workItem from="1771012434596" duration="137000" />
-      <workItem from="1771163536616" duration="10074000" />
+      <workItem from="1771163536616" duration="11695000" />
+      <workItem from="1771186286391" duration="3209000" />
     </task>
+    <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
+      <option name="closed" value="true" />
+      <created>1771173957257</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771173957257</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added new logo.pgn pictures">
+      <option name="closed" value="true" />
+      <created>1771189317073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771189317073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,5 +218,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes" />
+    <MESSAGE value="added new logo.pgn pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new logo.pgn pictures" />
   </component>
 </project>
