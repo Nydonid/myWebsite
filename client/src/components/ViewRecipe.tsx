@@ -8,7 +8,8 @@ function ViewRecipe() {
 
     const getRecipe = async () => {
         try {
-            fetch(`/api/recipes/${id}`)
+            const apiUrl = process.env.REACT_APP_API_URL || "";
+            fetch(`${apiUrl}/api/recipes/${id}`)
                 .then((res) => res.json())
                 .then((data) => setRecipe(data))
                 .catch((err) => console.error(err));

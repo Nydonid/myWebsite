@@ -27,7 +27,7 @@ services:
       dockerfile: Dockerfile
     container_name: ApiServer
     env_file:
-      - ./server/.env
+      - ./server/.env.production
     ports:
       - "5000:5000"
     labels:
@@ -47,6 +47,8 @@ services:
       context: ./client
       dockerfile: Dockerfile
     container_name: NodeApp
+    env_file:
+      - ./client/.env.production
     restart: unless-stopped
     ports:
       - "3000:80"
@@ -66,7 +68,7 @@ services:
     image: postgres:16
     container_name: RecipesDB
     env_file:
-      - ./server/.env
+      - ./server/.env.production
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./server/init:/docker-entrypoint-initdb.d

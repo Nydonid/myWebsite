@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: process.env.NODE_ENV === 'production' ? '.env' : '.env.local'
+});
+
 const express = require("express");
 const app = express();
 
@@ -6,8 +10,6 @@ const pool = require("./db");
 const jwt = require("jsonwebtoken");
 const api = express.Router();
 const port = 5000;
-
-require('dotenv').config();
 
 //middleware
 app.use(express.json()); //req.body

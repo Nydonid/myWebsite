@@ -15,7 +15,11 @@ const ListRecipes = () => {
 
     const getRecipes = async () => {
         try {
-            const response = await fetch("/api/recipes");
+            const apiUrl = process.env.REACT_APP_API_URL || "";
+            const response = await fetch(`${apiUrl}/api/recipes`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const jsonData = await response.json();
             setRecipes(Array.isArray(jsonData) ? jsonData : []);
         } catch (err: unknown) {

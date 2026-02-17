@@ -4,19 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="added new logo.pgn pictures">
+    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="added eggplant mincedmeat">
+      <change afterPath="$PROJECT_DIR$/server/.env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/recipe_images/wiener_schnitzel_ingredients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-prod.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index-backup15.01-api-xxx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/mattia/OneDrive/Dokumente/myWebsite" value="363ap7NRlCs6wllmac7Lnm0Nci1" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="chat-panel" value="Claude Haiku 4.5" />
+      <entry key="agent-panel" value="Claude Haiku 4.5" />
+    </selectedModels>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,7 +80,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/assets/recipe_images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -63,7 +91,7 @@
     &quot;npm.build:css.executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/client/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -79,7 +107,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.localhost:80">
     <configuration name="localhost:80" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80">
       <method v="2" />
     </configuration>
@@ -185,6 +213,9 @@
       <workItem from="1771012434596" duration="137000" />
       <workItem from="1771163536616" duration="11695000" />
       <workItem from="1771186286391" duration="3209000" />
+      <workItem from="1771323288328" duration="1101000" />
+      <workItem from="1771324406183" duration="1342000" />
+      <workItem from="1771328754712" duration="3547000" />
     </task>
     <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
       <option name="closed" value="true" />
@@ -202,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771189317073</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added eggplant mincedmeat">
+      <option name="closed" value="true" />
+      <created>1771270580925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771270580925</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +261,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes" />
     <MESSAGE value="added new logo.pgn pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new logo.pgn pictures" />
+    <MESSAGE value="added eggplant mincedmeat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added eggplant mincedmeat" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

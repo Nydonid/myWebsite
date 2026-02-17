@@ -34,7 +34,8 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 ingredients,
             };
 
-            await fetch(`/api/recipes/${recipe.recipe_id}`, {
+            const apiUrl = process.env.REACT_APP_API_URL || "";
+            await fetch(`${apiUrl}/api/recipes/${recipe.recipe_id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
