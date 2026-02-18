@@ -326,30 +326,30 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-            (9, NULL, NULL, 'Öl zum Braten'),
-            (9, 1, 'EL', 'Ketchup'),
-            (9, 1, NULL, 'Peperoni'),
-            (9, 1, NULL, 'Zwiebel'),
-            (9, 75, 'g', 'milder Tilsiter'),
-            (9, 1, 'kleine Dose', 'Mais und Bohnen'),
-            (9, 300, 'g', 'Pouletgeschnetzeltes'),
-            (9, NULL, NULL, 'Pfeffer'),
-            (9, NULL, NULL, 'Salz'),
-            (9, 6, NULL, 'Weizentortillas'),
-            (9, NULL, NULL, 'Peterli'),
-            (9, 1, 'Becher', 'Crème fraîche (ca 160 g)');
+        (9, NULL, NULL, 'Öl zum Braten'),
+        (9, 1, 'EL', 'Ketchup'),
+        (9, 1, NULL, 'Peperoni'),
+        (9, 1, NULL, 'Zwiebel'),
+        (9, 75, 'g', 'milder Tilsiter'),
+        (9, 1, 'kleine Dose', 'Mais und Bohnen'),
+        (9, 300, 'g', 'Pouletgeschnetzeltes'),
+        (9, NULL, NULL, 'Pfeffer'),
+        (9, NULL, NULL, 'Salz'),
+        (9, 6, NULL, 'Weizentortillas'),
+        (9, NULL, NULL, 'Peterli'),
+        (9, 1, 'Becher', 'Crème fraîche (ca 160 g)');
 
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
         'Auberginen mit Hackfleisch',
         60,
-        'Mega feiner Low-carb Hit mit viel Gemüse und Hackfleisch. Aus der Coop-Zeitung, für 2 Portionen. Effektive Zubereitungszeit 40 Minuten.',
+        'Mega feiner low-carb Hit mit viel Gemüse und Hackfleisch. Aus der Coop-Zeitung, für 2 Portionen. Effektive Zubereitungszeit 40 Minuten.',
         ARRAY[
             'Ofen auf 200°C Umluft vorheizen.',
             'Aubergine längs in ca. 1 cm breite Streifen schneiden, auf eine mit Backpapier belegte Form legen, gleichmässig etwas Öl darübergiessen und mit einer Prise salzen.',
             'Zum Backen 20 Minuten in der Mitte des Ofens.',
-            'Zwiebel und Knoblauch schälen, in kleine Stücke hacken. 1EL Öl in einer Bratpfanne erhitzen, das Hackfleisch für 3-4 Minuten darin anbraten; herausnehmen.',
+            'Zwiebel und Knoblauch schälen, in kleine Stücke hacken. 1EL Öl in einer Bratpfanne erhitzen, das Hackfleisch für 3-4 Minuten darin anbraten. Herausnehmen.',
             'Zwiebel und Knoblauch kurz anbraten, Pelati, Tomatenmark und Kapern zugeben. Würzen, Hackfleisch auch wieder zugeben. Etwas köcheln.',
             'Nach den 20 Minuten die Auberginen aus dem Ofen nehmen, diese mitsamt dem Papier aus der Form heben. Ofen nicht auskühlen lassen.',
             'Eine erste Hälfte der Auberginen in die Form geben, eine Hälfte der Hackfleischmasse darübergeben. Nochmals wiederholen. Den Parmiggiano darüber bis alles schön bedeckt ist.',
@@ -362,15 +362,55 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-            (10, NULL, NULL, 'Olivenöl'),
-            (10, 300, 'g', 'Rindshackfleisch'),
-            (10, 1, NULL, 'Aubergine'),
-            (10, 1, NULL, 'Zwiebel'),
-            (10, 400, 'g', 'Tomaten Pelati'),
-            (10, 1, NULL, 'Knoblauchzehe'),
-            (10, 1, 'EL', 'Tomatenmark'),
-            (10, 1, 'EL', 'Kapern'),
-            (10, 0.5, 'TL', 'Salz'),
-            (10, NULL, 'wenig', 'Pfeffer'),
-            (10, NULL, 'wenig', 'Orgeano'),
-            (10, 30, 'g', 'Parmiggiano');
+        (10, NULL, NULL, 'Olivenöl'),
+        (10, 300, 'g', 'Rindshackfleisch'),
+        (10, 1, NULL, 'Aubergine'),
+        (10, 1, NULL, 'Zwiebel'),
+        (10, 400, 'g', 'Tomaten-Pelati'),
+        (10, 1, NULL, 'Knoblauchzehe'),
+        (10, 1, 'EL', 'Tomatenmark'),
+        (10, 1, 'EL', 'Kapern'),
+        (10, 0.5, 'TL', 'Salz'),
+        (10, NULL, 'wenig', 'Pfeffer'),
+        (10, NULL, 'wenig', 'Oregano'),
+        (10, 30, 'g', 'Parmiggiano');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Wenn''s wieder nur Spghetti sein soll, aber doch bitte mit etwas Abwechslungs: Mit Poulet, Bundzwiebeln und Sojasauce. Originalrezept für 2-3 Portionen, von Betty Bossi.',
+        30,
+        'Spaghetti mit gebratenem Pouletgeschnetzeltem und würziger Sojasauce.',
+        ARRAY[
+            'Spaghetti im siedenden Salzwasser al dente kochen, abtropfen und zurück in die Pfanne geben.',
+            'Mehl, Salz und Pfeffer in einem tiefen Teller mischen.',
+            'Wenig Öl in einer beschichteten Bratpfanne erhitzen. Poulet im Mehl wenden und dann ca. 3 Minuten braten, herausnehmen.',
+            'Bundzwiebeln schräg in Stücke schneiden, Knoblauch pressen und beides andämpfen.',
+            'Hitze reduzieren, eventuell nochmals wenig Öl beigeben.',
+            'Bouillon, Maizena und Sojasauce verrühren, unter Rühren dazugiessen und aufkochen.',
+            'Hitze reduzieren und ca. 5 Minuten köcheln lassen. Fleisch wieder beigeben und nur noch heiss werden lassen.',
+            'Spaghetti mit dem Poulet mischen und abschmecken, servieren.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_spaghetti_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_spaghetti_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (11, 300, 'g', 'Spaghetti'),
+        (11, NULL, NULL, 'Salzwasser'),
+
+        (11, 1.5, 'EL', 'Mehl'),
+        (11, 0.25, 'TL', 'Salz'),
+        (11, 0.25, 'TL', 'Pfeffer'),
+        (11, NULL, NULL, 'Öl zum Braten'),
+        (11, 300, 'g', 'Pouletgeschnetzeltes'),
+
+        (11, 2, NULL, 'Bundzwiebeln'),
+        (11, 1, NULL, 'Knoblauchzehe'),
+        (11, 1, 'EL', 'Bouillon'),
+        (11, 2, 'dl', 'Wasser'),
+        (11, 1, 'EL', 'Maizena'),
+        (11, 2, 'EL', 'Sojasauce'),
+        (11, NULL, NULL, 'Salz nach Bedarf'),
+        (11, NULL, NULL, 'Pfeffer nach Bedarf');
