@@ -197,8 +197,8 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
             'Erdäpfelsalat nochmals abschmecken und ebenfalls mit der Preiselbeer-Saucen servieren.'
             ],
         ARRAY[
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_ingredients.jpg',
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_recipe.jpg'
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/wiener_schnitzel_ingredients.jpg'
             ]
     );
 
@@ -377,9 +377,9 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
-        'Wenn''s wieder nur Spghetti sein soll, aber doch bitte mit etwas Abwechslungs: Mit Poulet, Bundzwiebeln und Sojasauce. Originalrezept für 2-3 Portionen, von Betty Bossi.',
+        'Spaghetti mit Poulet',
         30,
-        'Spaghetti mit gebratenem Pouletgeschnetzeltem und würziger Sojasauce.',
+        'Wenn''s wieder nur Spghetti sein soll, aber doch bitte mit etwas Abwechslungs: Mit Poulet, Bundzwiebeln und Sojasauce. Originalrezept für 2-3 Portionen, von Betty Bossi.',
         ARRAY[
             'Spaghetti im siedenden Salzwasser al dente kochen, abtropfen und zurück in die Pfanne geben.',
             'Mehl, Salz und Pfeffer in einem tiefen Teller mischen.',
