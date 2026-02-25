@@ -414,3 +414,43 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (11, 2, 'EL', 'Sojasauce'),
         (11, NULL, NULL, 'Salz nach Bedarf'),
         (11, NULL, NULL, 'Pfeffer nach Bedarf');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Turkish Pasta',
+        25,
+        'Pasta mit würzigem Hackfleisch, Joghurt-Knoblauch-Sauce und Butter-Paprika-Sauce, garniert mit Peterli und Tomaten. Für 2-3 Portionen, Originalrezept von Swissmilk.',
+        ARRAY[
+            'Bratcrème in einer Pfanne erhitzen. Hackfleisch und gehackte Zwiebel unter gelegentlichem Rühren anbraten.',
+            '1 EL Tomatenpüree beigeben und mit Pfeffer, Paprika und Salz abschmecken.',
+            'Pasta nach Packungsanleitung kochen, abgiessen und beiseitestellen.',
+            '225 g Joghurt mit wenig Salz und 2 gepressten oder geschnittenen Knoblauchzehen verrühren.',
+            '25 g Butter schmelzen und 1.5 EL Paprika einrühren. Mattia-Tipp: Die Butter in eine Schale, diese für 3 Minuten im Pasta-Wasser schwimmen lassen.',
+            'Pasta auf Teller anrichten, Joghurt-Knoblauch-Sauce darübergeben, danach Hackfleisch und Butter-Paprika-Sauce zum Schluss.',
+            'Nach Belieben mit gehacktem Peterli, Koriander und Tomaten garnieren.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (12, 300, 'g', 'Hackfleisch'),
+        (12, 1, NULL, 'Zwiebel'),
+        (12, 1, 'EL', 'Tomatenpüree'),
+        (12, NULL, NULL, 'Pfeffer'),
+        (12, NULL, NULL, 'Salz'),
+        (12, 0.5, 'TL', 'Paprika (für das Fleisch)'),
+
+        (12, 260, 'g', 'Pasta (z.B. Fusilli)'),
+
+        (12, 225, 'g', 'Rahmjoghurt, griechische Art'),
+        (12, 2, NULL, 'Knoblauchzehen'),
+
+        (12, 25, 'g', 'Butter'),
+        (12, 1.5, 'EL', 'Paprika (für die Buttersauce)'),
+
+        (12, 0.5, 'Bund', 'Peterli und / oder Koriander'),
+        (12, 150, 'g', 'kleine Tomaten'),
+        (12, NULL, NULL, 'Bratcrème');
