@@ -15,7 +15,11 @@ const ListRecipes = () => {
 
     const getRecipes = async () => {
         try {
-            const response = await fetch("/api/recipes");
+            const apiUrl = process.env.REACT_APP_API_URL || "";
+            const response = await fetch(`${apiUrl}/api/recipes`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const jsonData = await response.json();
             setRecipes(Array.isArray(jsonData) ? jsonData : []);
         } catch (err: unknown) {
@@ -30,7 +34,7 @@ const ListRecipes = () => {
 
     return (
         <Fragment>
-            <article className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-w-screen items-stretch px-[12vw] justify-items-center">
+            <article className="grid grid-cols-1 lg:grid-cols-2 items-stretch justify-items-center">
                 {recipes.map((recipe) => (
                     <div key={recipe.recipe_id} className="card bg-accent/4 dark:bg-accent/30 m-4 shadow-sm transition-shadow">
                         <Link to={`/recipes/${recipe.recipe_id}`}>

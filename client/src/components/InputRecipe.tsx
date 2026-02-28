@@ -30,7 +30,8 @@ const InputRecipe = () => {
                 ingredients,
             };
 
-            await fetch("/api/recipes", {
+            const apiUrl = process.env.REACT_APP_API_URL || "";
+            await fetch(`${apiUrl}/api/recipes`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
