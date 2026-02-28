@@ -7,6 +7,12 @@ package-lock.json
 .env.local
 .env.production
 
+/server/.env.local
+/server/.env.production
+
+/client/.env.local
+/client/.env.production
+
 # Build output
 # /client/build/
 /client/dist/
