@@ -44,7 +44,7 @@ services:
     build:
       context: ./client
       args:
-        - REACT_APP_API_URL=https://mattia.gr
+        - REACT_APP_API_URL=
       dockerfile: Dockerfile
     container_name: NodeApp
     restart: unless-stopped
