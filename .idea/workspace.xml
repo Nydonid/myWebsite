@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DeleteRecipeButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/InputRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListRecipes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ViewRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Recipes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-prod.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index-backup15.01-api-xxx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.localhost:80" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build:css" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.test" />
+        <item itemvalue="JavaScript Debug.localhost:80" />
       </list>
     </recent_temporary>
   </component>

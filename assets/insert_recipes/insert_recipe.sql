@@ -454,3 +454,28 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (12, 0.5, 'Bund', 'Peterli und / oder Koriander'),
         (12, 150, 'g', 'kleine Tomaten'),
         (12, NULL, NULL, 'Bratcrème');
+
+
+-- Attention, Hörnli mit ghackets went missing.
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Maluns',
+        60,
+        'Diese einfache Bündner Spezialität besteht tatsächlich nur aus drei Zutaten. Umso mehr als Zutaten wird allerdings Geduld gebraucht, fast eine Stunde wird geröstet. Als Beilage etwas Käse und Apfelmus, für 4 Personen.',
+        ARRAY[
+            'In einem Topf Kartoffeln, Mehl und wenig der Butter gut mit den Händen verreiben, so, dass es Kügelchen gibt.',
+            'Etwas der Butter in einer grossen Pfanne erhitzen, die Masse beigeben und 45min auf kleiner bis mittlerer Stufe rösten. Immerwieder rühren und wenden. Butter nach und nach beigeben.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (14, 1, 'kg', 'Gschwellti vom Vortag, mehligkochend'),
+        (14, 300, 'g', 'Mehl'),
+        (14, 100, 'g', 'Butter'),
+        (14, NULL, NULL, 'Pfeffer'),
+        (14, NULL, NULL, 'Salz');
