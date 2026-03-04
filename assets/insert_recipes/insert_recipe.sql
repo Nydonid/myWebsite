@@ -468,8 +468,8 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
             'Etwas der Butter in einer grossen Pfanne erhitzen, die Masse beigeben und 45min auf kleiner bis mittlerer Stufe rösten. Immerwieder rühren und wenden. Butter nach und nach beigeben.'
             ],
         ARRAY[
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_recipe.jpg',
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/turkish_pasta_ingredients.jpg'
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/maluns_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/maluns_ingredients.jpg'
             ]
     );
 
