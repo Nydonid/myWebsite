@@ -479,3 +479,35 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (14, 100, 'g', 'Butter'),
         (14, NULL, NULL, 'Pfeffer'),
         (14, NULL, NULL, 'Salz');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Älpermagrone',
+        30,
+        'Eis vo de bewährtischte und mega-feinste schwiizer Gricht. Het no nie öperd nur e chlini Portion gno. Vo Betty Bossi für 2-3 Portione',
+        ARRAY[
+            'Zwieble, Knoblauch und Herdöpfel schäle. Zwieble in Ring, Knoblauch in Schibli und Herdöpfel in Würfeli schnide.',
+            '3.5 dl Wasser und 2 dl Rahm in enere Pfanne ufkoche.',
+            'Zwieble, Knoblauch und Speck in enere Bratpfanne goldbrun brate, usenä und ufd Site stelle.',
+            'Herdöpfel und Magrone zuedeckt bei chliner Hitz ca. 12 Minuten köchele, bis dTeigware al dente sind. Eventuell ischs nötig zum bitz Wasser nachefülle.',
+            'Gruyère (gribe) unter dHerdöpfel und Magrone mische, guet verrühere.',
+            'Mit Salz und Pfeffer abschmöcke und uf Teller verteile, Speck-Zwiebel-Mischig drüber ahrichte.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/aelpermaggrone_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/aelpermaggrone_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (15, 2, NULL, 'Zwieble'),
+        (15, 2, NULL, 'Knoblauchzehe'),
+        (15, 300, 'g', 'festkochendi Herdöpfel'),
+        (15, 100, 'g', 'Speckwürfeli'),
+        (15, 3, 'dl', 'Wasser'),
+        (15, 1, 'EL', 'Bouillon'),
+        (15, 2, 'dl', 'Rahm'),
+        (15, 250, 'g', 'Magrone'),
+        (15, 45, 'g', 'Gruyère'),
+        (15, NULL, NULL, 'Salz'),
+        (15, NULL, NULL, 'Pfeffer');
