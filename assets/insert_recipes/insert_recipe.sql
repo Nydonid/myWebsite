@@ -511,3 +511,35 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (15, 45, 'g', 'Gruyère'),
         (15, NULL, NULL, 'Salz'),
         (15, NULL, NULL, 'Pfeffer');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Kalbsbratwurst an Zwiebelsauce',
+        20,
+        'Mit der richtigen würzigen Zwiebelsauce lassen sich Bratwürste aus der Pfanne hervorragen einfach abrunden. Dazu Pasta oder Brot. Für 2 Portionen nach diesem Rezept, von Swissmilk inspiriert.',
+        ARRAY[
+            'Würste einschneiden und in einer Pfanne bei mittlerer Hitze ca. 10 Minuten braten.',
+            'Zwiebeln schälen, in Ringe schneiden und in Butter kurz andünsten.',
+            'Mit 1 EL Mehl bestäuben und gut durchmischen.',
+            'Gleich 1 EL Tomatenpüree beigeben und 2 Minuten rösten, bis die Mischung stellenweise braun wird.',
+            'Mit dem Rotwein ablöschen.',
+            'Wasser dazugiessen, Boillon beigeben und zur gewünschten Konsistenz einkochen, abschmecken.',
+            'Bratwürste mit der Sauce anrichten.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/onionsauce_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/onionsauce_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (16, 2, NULL, 'Olma-Bratwürste'),
+        (16, 2, NULL, 'grosse Zwiebeln'),
+        (16, NULL, NULL, 'Butter'),
+        (16, 1, 'EL', 'Mehl'),
+        (16, 1, 'EL', 'Tomatenpüree'),
+        (16, 0.75, 'dl', 'Rotwein'),
+        (16, 0.75, 'dl', 'Wasser'),
+        (16, 1, 'TL', 'Bouillon'),
+        (16, NULL, NULL, 'Salz'),
+        (16, NULL, NULL, 'Pfeffer');
