@@ -545,3 +545,31 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (16, 1, 'TL', 'Bouillon'),
         (16, NULL, NULL, 'Salz'),
         (16, NULL, NULL, 'Pfeffer');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Spaghetti Carbonara',
+        20,
+        'Supereinfach und superfein: Spaghetti Carbonara mit Ei und Speck. Von Swissmilk inspiriert mit eigenen Anpassungen, für 2-3 Portionen mit diesen Mengen.',
+        ARRAY[
+            'Spaghetti im Salzwasser al dente kochen. Vor dem Abgiessen eine Tasse Kochwasser beiseitestellen.',
+            'Speck in kleinere Stücke zuschneiden, in einer grossen Bratpfanne knusprig braten. Gegen Schluss die Zwibel schälen, schnipseln und kurz mitdünsten.',
+            'Spaghetti abgiessen und zum Speck geben, gut vermischen.',
+            'Käse und beigeben und unterrühren.',
+            'Etwas Spaghettiwasser oder Rahm (ca. 1 dl) beigeben, bis eine cremige Sauce entsteht.',
+            'Anrichten und mit Käse sowie Pfeffer bestreuen.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spagetti_carbonara_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spagetti_carbonara_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (17, 275, 'g', 'Spaghetti'),
+        (17, 3, NULL, 'Eier'),
+        (17, 1, NULL, 'Zwiebel'),
+        (17, 80, 'g', 'geriebener Käse wie z.B. Sbrinz'),
+        (17, 100, 'g', 'Specktrangen'),
+        (17, NULL, NULL, 'Pfeffer'),
+        (17, NULL, NULL, 'Salzwasser');

@@ -7,7 +7,6 @@
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/recipe_images/aelpermaggrone_recipe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/recipe_images/aelpermaggrone_recipe.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +209,8 @@
       <workItem from="1773691034147" duration="2361000" />
       <workItem from="1773828694158" duration="2763000" />
       <workItem from="1773920233527" duration="178000" />
-      <workItem from="1774084804446" duration="1114000" />
+      <workItem from="1774084804446" duration="1881000" />
+      <workItem from="1774122080613" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
       <option name="closed" value="true" />
