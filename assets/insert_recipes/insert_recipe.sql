@@ -486,12 +486,14 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
         30,
         'Eis vo de bewährtischte und mega-feinste schwiizer Gricht. Het no nie öperd nur e chlini Portion gno. Vo Betty Bossi für 2-3 Portione',
         ARRAY[
-            'Zwieble, Knoblauch und Herdöpfel schäle. Zwieble in Ring, Knoblauch in Schibli und Herdöpfel in Würfeli schnide.',
-            '3.5 dl Wasser und 2 dl Rahm in enere Pfanne ufkoche.',
-            'Zwieble, Knoblauch und Speck in enere Bratpfanne goldbrun brate, usenä und ufd Site stelle.',
+            'Herdöpfel schäle, und in chlini Viereckli schnide.'
+            '3.5 dl Wasser, 1 El Bouillon und 2 dl Rahm in enere Pfanne ufkoche. Herdöpfel vom Afang ah ine gäh, Magrone erst wenns kocht.',
             'Herdöpfel und Magrone zuedeckt bei chliner Hitz ca. 12 Minuten köchele, bis dTeigware al dente sind. Eventuell ischs nötig zum bitz Wasser nachefülle.',
+            'Als nächsts de Speck i de Bratpfanne uf mittlere Stufe afange abrate.'
+            'Glichziitig Zwieble und Knoblauch schäle. Zwieble in Ringli, Knoblauch in Schibli schnide.',
+            'Wenn de Speck langsam goldbrun wird, Zwible und Knoblauch für knapp 3 Minute dezuegeh. Bis de Kochtopf parat isch uf tüfe Stufe warm halte.',
             'Gruyère (gribe) unter dHerdöpfel und Magrone mische, guet verrühere.',
-            'Mit Salz und Pfeffer abschmöcke und uf Teller verteile, Speck-Zwiebel-Mischig drüber ahrichte.'
+            'Mit Salz und Pfeffer abschmecke und uf Teller verteile, Speck-Zwiebel-Mischig drüber ahrichte.'
             ],
         ARRAY[
             'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/aelpermaggrone_recipe.jpg',
@@ -504,7 +506,7 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (15, 2, NULL, 'Knoblauchzehe'),
         (15, 300, 'g', 'festkochendi Herdöpfel'),
         (15, 100, 'g', 'Speckwürfeli'),
-        (15, 3, 'dl', 'Wasser'),
+        (15, 3.5, 'dl', 'Wasser'),
         (15, 1, 'EL', 'Bouillon'),
         (15, 2, 'dl', 'Rahm'),
         (15, 250, 'g', 'Magrone'),
