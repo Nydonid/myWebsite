@@ -573,3 +573,34 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (17, 100, 'g', 'Specktrangen'),
         (17, NULL, NULL, 'Pfeffer'),
         (17, NULL, NULL, 'Salzwasser');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Pasta mit Zitronenpoulet',
+        25,
+        'Ein einfaches und mal etwas anders Gericht, mit frischem Zitronenaroma. Für 2 Portionen, mal ein Rezept von der Volg Website.',
+        ARRAY[
+            'Pasta im siedenden Salzwasser bissfest kochen und abgiessen.',
+            '0.5 dl Olivenöl erhitzen, Zitronenschale und -saft zugeben.',
+            'Nach Belieben Tabasco beigeben.',
+            'Pouletgeschnetzeltes dazugeben und ca. 7 Minuten köcheln lassen.',
+            'Poulet mit der heissen Pasta mischen.',
+            'Schnittlauch oder Peterli darüberstreuen und würzen.',
+            'Mit Reibkäse bestreuen und sofort servieren.'
+            ],
+        ARRAY[
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_lime_spaghetti_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/chicken_lime_spaghetti_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (18, 250, 'g', 'Pasta (z. B. Spaghetti)'),
+        (18, NULL, NULL, 'Salz'),
+        (18, 1, NULL, 'Zitrone (Schale und Saft)'),
+        (18, 0.5, 'dl', 'Olivenöl'),
+        (18, NULL, NULL, 'Tabasco'),
+        (18, 300, 'g', 'Pouletgeschnetzeltes'),
+        (18, 1, 'Bund', 'Schnittlauch oder Peterli'),
+        (18, NULL, NULL, 'Pfeffer'),
+        (18, NULL, NULL, 'Reibkäse (z. B. Sbrinz)');
