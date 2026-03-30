@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0abcad74-f587-4847-a4e4-cdbe97750148.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
     </list>
@@ -65,7 +67,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/assets/recipe_images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -156,7 +160,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.32098.39" />
       </set>
     </attachedChunks>
   </component>
@@ -210,7 +214,10 @@
       <workItem from="1773828694158" duration="2763000" />
       <workItem from="1773920233527" duration="178000" />
       <workItem from="1774084804446" duration="1881000" />
-      <workItem from="1774122080613" duration="1390000" />
+      <workItem from="1774122080613" duration="2124000" />
+      <workItem from="1774425645737" duration="35000" />
+      <workItem from="1774543254570" duration="484000" />
+      <workItem from="1774897057411" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
       <option name="closed" value="true" />

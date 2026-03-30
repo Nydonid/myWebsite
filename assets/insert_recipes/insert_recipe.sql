@@ -560,8 +560,8 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
             'Anrichten und mit Käse sowie Pfeffer bestreuen.'
             ],
         ARRAY[
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spagetti_carbonara_recipe.jpg',
-            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spagetti_carbonara_ingredients.jpg'
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spaghetti_carbonara_recipe.jpg',
+            'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/spaghetti_carbonara_ingredients.jpg'
             ]
     );
 
