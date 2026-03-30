@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/insert_recipes/insert_recipe.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +221,7 @@
       <workItem from="1774425645737" duration="35000" />
       <workItem from="1774543254570" duration="484000" />
       <workItem from="1774897057411" duration="622000" />
-      <workItem from="1774898148663" duration="1151000" />
+      <workItem from="1774898148663" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
       <option name="closed" value="true" />

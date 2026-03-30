@@ -23,8 +23,12 @@ logs/
 
 # IDE files
 .idea/
+/server/.idea
 *.iml
 .vscode/
 
 # OS files
 .DS_Store
+
+# other
+/crazyshiit
