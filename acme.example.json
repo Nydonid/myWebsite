@@ -1,0 +1,15 @@
+{
+  "le": {
+    "Account": {
+      "Email": "email",
+      "Registration": {
+        "body": {
+          "status": "valid"
+        },
+        "uri": "https://acme-v02.api.letsencrypt.org/acme/acct/secret"
+      },
+      "PrivateKey": "privatekey"
+    },
+    "Certificates": null
+  }
+}
