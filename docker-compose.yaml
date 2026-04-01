@@ -29,7 +29,7 @@ services:
     env_file:
       - ./server/.env.production
     ports:
-      - "5000:5000"
+      - "127.0.0.1:5000:5000"
     labels:
       - traefik.enable=true
 #      - traefik.http.routers.api.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`) && PathPrefix(`/api`)
@@ -51,7 +51,7 @@ services:
     container_name: NodeApp
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "127.0.0.1:3000:80"
     labels:
       - traefik.enable=true
 #      - traefik.http.routers.nodeapp.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`)
@@ -73,7 +73,7 @@ services:
       - pgdata:/var/lib/postgresql/data
       - ./server/init:/docker-entrypoint-initdb.d
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
 volumes:
   pgdata:
   traefik-acme:
