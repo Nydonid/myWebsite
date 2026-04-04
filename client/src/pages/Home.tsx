@@ -16,14 +16,24 @@ function Home() {
                     <figure className="hero-content">
                         <div>
                             <Typewriter />
-                            <p className="text-2xl text-base-content mt-6 mb-6">
-                                Besuche meine Webseite und entdecke feine Rezepte.
+                            <div className="flex items-center justify-center gap-2 mt-12 mb-12">
+                                <img 
+                                    src="/mattiastettler-small.png" 
+                                    alt="Mattia" 
+                                    className="w-16 h-16 rounded-full object-cover border-2 mr-4 border-primary"
+                                />
+                                <p className="text-3xl font-light">Ich bin</p>
+                                <p className="text-3xl font-light text-primary">Mattia</p>
+                                <p className="text-3xl font-light">Stettler</p>
+                            </div>
+                            <p className="text-2xl mt-6 mb-6">
+                                Hallo auf meiner Webseite, entdecke feine Rezepte und .
                             </p>
                             <div className="flex justify-center gap-4">
                                 <Link to="/portfolio" className="btn btn-primary">
                                     Portfolio
                                 </Link>
-                                <Link to="/recipes" className="btn btn-secondary">
+                                <Link to="/recipes" className="btn btn-accent">
                                     Rezepte
                                 </Link>
                             </div>
@@ -36,4 +46,3 @@ function Home() {
 }
 
 export default Home;
-

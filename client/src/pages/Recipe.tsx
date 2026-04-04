@@ -1,6 +1,7 @@
 import MyHeader from "../components/MyHeader";
 import React, { Fragment } from "react";
 import ViewRecipe from "../components/ViewRecipe";
+import MyFooter from "../components/MyFooter";
 
 function Recipe() {
     return (
@@ -11,6 +12,7 @@ function Recipe() {
                     <ViewRecipe />
                 </div>
             </Fragment>
+            <MyFooter />
         </>
     );
 }
