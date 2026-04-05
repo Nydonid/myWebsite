@@ -36,7 +36,7 @@ const ListRecipes = () => {
         <Fragment>
             <article className="grid grid-cols-1 lg:grid-cols-2 items-stretch justify-items-center">
                 {recipes.map((recipe) => (
-                    <div key={recipe.recipe_id} className="card bg-accent/4 dark:bg-accent/30 m-4 shadow-sm transition-shadow">
+                    <div key={recipe.recipe_id} className="card bg-base-200 hover:bg-base-300 rounded-lg m-4 shadow-sm transition-shadow">
                         <Link to={`/recipes/${recipe.recipe_id}`}>
                         <figure className="px-4 pt-4">
                             {recipe.imageurls && (
@@ -45,7 +45,7 @@ const ListRecipes = () => {
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title text-lg">{recipe.title}</h2>
-                            <p className="text-secondary">{recipe.prep_time} min</p>
+                            <p className="text-accent">{recipe.prep_time} min</p>
                         </div>
                     </Link>
                     {isLoggedIn && (

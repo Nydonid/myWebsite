@@ -13,7 +13,7 @@ const ProfessionalExperience = () => {
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Arbeitserfahrung</h2>
             <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table bg-base-200">
                     <tbody>
                         {experiences.map((exp, index) => (
                             <tr key={index}>

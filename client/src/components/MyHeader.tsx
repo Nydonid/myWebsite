@@ -9,7 +9,7 @@ function MyHeader() {
     const theme = useTheme();
 
     return (
-        <header className="navbar bg-base-100 pl-6 pr-6 shadow-lg justify-between items-center border-b-2 border-secondary">
+        <header className="navbar bg-base-100 pl-6 pr-6 shadow-lg flex justify-between items-center dark:border-b-2 dark:border-base-200">
             <Link to="/" className="flex justify-between items-center">
                 <CableCar className="mr-3 size-5.5"/> MATTIA
             </Link>

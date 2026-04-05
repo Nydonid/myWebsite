@@ -13,7 +13,7 @@ function Portfolio() {
             <MyHeader />
             <main className="flex-grow flex flex-col items-center">
                 <div className="w-full max-w-4xl px-6 py-10 space-y-8">
-                    <h1 className="text-3xl font-bold text-primary">Portfolio</h1>
+                    <h1 className="text-3xl font-bold text-base-content">Portfolio</h1>
                     <PersonalInfo />
                     <About />
                     <ProfessionalExperience />
