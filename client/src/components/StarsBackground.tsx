@@ -12,7 +12,7 @@ const StarsBackground: React.FC<StarsBackgroundProps> = () => {const stars = Arr
                 width: `${Math.random() * 2 + 1}px`,
                 height: `${Math.random() * 2 + 1}px`,
                 left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 7 + 12}s`,
+                animationDuration: `${Math.random() * 12 + 7}s`,
                 animationDelay: `${Math.random() * -15}s`,
                 opacity: Math.random() * 0.2 + 0.8,
             }}
