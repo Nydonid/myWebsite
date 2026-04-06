@@ -1,8 +1,7 @@
 import Navbar from '../components/Navbar';
-import {CableCar, House, Sun, MoonStar} from 'lucide-react';
+import {CableCar} from 'lucide-react';
 import {useTheme} from '../hooks/useThemes';
 import {Link} from "react-router-dom";
-import StarsBackground from "./StarsBackground";
 
 
 function MyHeader() {

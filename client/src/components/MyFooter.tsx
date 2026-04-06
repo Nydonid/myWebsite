@@ -1,7 +1,4 @@
-import {Typography} from "@mui/material";
 import {Link} from "react-router-dom";
-import {CableCar} from "lucide-react";
-import Navbar from "./Navbar";
 
 function MyFooter() {
     return (

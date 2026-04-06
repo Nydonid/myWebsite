@@ -3,16 +3,17 @@ import MyHeader from '../components/MyHeader';
 import Typewriter from '../components/Typewriter';
 import StarsBackground from '../components/StarsBackground';
 import { useTheme } from '../hooks/useThemes';
+import PictureBackground from "../components/PictureBackground";
 
 function Home() {
     const theme = useTheme();
 
     return (
-        <>
+        <div className="h-screen overflow-hidden flex flex-col">
             <MyHeader />
-            <main className={`content min-h-screen bg-base-100 flex items-center justify-center transition-colors duration-300`}>
-                {theme === 'dark' && <StarsBackground />}
-                <article className="hero max-w-4xl mx-auto mt-[4] p-6 text-center">
+            <main className="flex-grow flex items-center justify-center bg-base-100 relative">
+                {theme === 'dark' ? <StarsBackground /> : <PictureBackground />}
+                <article className="hero max-w-4xl mx-auto p-6 text-center z-10">
                     <figure className="hero-content">
                         <div>
                             <Typewriter />
@@ -42,7 +43,7 @@ function Home() {
                     </figure>
                 </article>
             </main>
-        </>
+        </div>
     );
 }
 

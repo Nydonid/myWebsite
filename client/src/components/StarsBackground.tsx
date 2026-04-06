@@ -4,7 +4,7 @@ interface StarsBackgroundProps {
     className?: string;
 }
 
-const StarsBackground: React.FC<StarsBackgroundProps> = () => {const stars = Array.from({length: 85}).map((_, i) => (
+const StarsBackground: React.FC<StarsBackgroundProps> = () => {const stars = Array.from({length: 160}).map((_, i) => (
         <div
             key={i}
             className="star"
