@@ -8,6 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+  manual-approval:
+    name: Manual Approval
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -18,18 +22,12 @@ jobs:
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/key
           chmod 400 ~/.ssh/key
 
-      - name: Copy files to server
-        run: |
-            docker pull
-            docker-compose.prod.yaml .env.prod \
-            ${{ secrets.USER }}@${{ secrets.HOST }}:~/myWebsite/
-
-      - name: Deploy via SSH
+      - name: Deploy to prod via SSH
         run: |
           ssh -i ~/.ssh/key -o StrictHostKeyChecking=no \
             ${{ secrets.USER }}@${{ secrets.HOST }} "
               cd ~/myWebsite &&
               docker compose pull &&
               docker compose down &&
-              docker compose up -d --remove-orphans
+              docker compose up --build -d --remove-orphans
             "
