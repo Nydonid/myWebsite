@@ -1,19 +1,16 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Recipe } from "../RecipeInterface";
-import EditRecipeForm from "./EditRecipe"
 import DeleteRecipeButton from "./DeleteRecipeButton";
 import EditRecipe from "./EditRecipe";
 
-interface ListRecipesProps {
-    recipes: Recipe[];
-}
-
 const ListRecipes = () => {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
     const isLoggedIn = !!localStorage.getItem("token");
 
     const getRecipes = async () => {
+        setIsLoading(true);
         try {
             const apiUrl = process.env.REACT_APP_API_URL || "";
             const response = await fetch(`${apiUrl}/api/recipes`);
@@ -25,6 +22,8 @@ const ListRecipes = () => {
         } catch (err: unknown) {
             console.error(err instanceof Error ? err.message : "Unknown error");
             setRecipes([]);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -32,30 +31,42 @@ const ListRecipes = () => {
         getRecipes();
     }, []);
 
+    if (isLoading) {
+        return (
+            <div className="flex justify-center items-center h-64">
+                <span className="loading loading-spinner loading-lg text-primary"></span>
+            </div>
+        );
+    }
+
     return (
         <Fragment>
             <article className="grid grid-cols-1 lg:grid-cols-2 items-stretch justify-items-center">
-                {recipes.map((recipe) => (
-                    <div key={recipe.recipe_id} className="card bg-accent/4 dark:bg-accent/30 m-4 shadow-sm transition-shadow">
-                        <Link to={`/recipes/${recipe.recipe_id}`}>
-                        <figure className="px-4 pt-4">
-                            {recipe.imageurls && (
-                                <img className="rounded-lg object-cover w-fit hover:brightness-110 transition-filter duration-300" src={recipe.imageurls[0]} alt={recipe.title}/>
+                {recipes.length > 0 ? (
+                    recipes.map((recipe) => (
+                        <div key={recipe.recipe_id} className="card bg-base-200 hover:bg-base-300 rounded-lg m-4 shadow-sm transition-shadow">
+                            <Link to={`/recipes/${recipe.recipe_id}`}>
+                                <figure className="px-4 pt-4">
+                                    {recipe.imageurls && recipe.imageurls.length > 0 && (
+                                        <img className="rounded-lg object-cover w-full h-48 hover:brightness-110 transition-filter duration-300" src={recipe.imageurls[0]} alt={recipe.title}/>
+                                    )}
+                                </figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-lg">{recipe.title}</h2>
+                                    <p className="text-accent">{recipe.prep_time} min</p>
+                                </div>
+                            </Link>
+                            {isLoggedIn && (
+                                <div className="card-actions justify-end p-4">
+                                    <EditRecipe recipe={recipe} />
+                                    <DeleteRecipeButton recipe={recipe} />
+                                </div>
                             )}
-                        </figure>
-                        <div className="card-body">
-                            <h2 className="card-title text-lg">{recipe.title}</h2>
-                            <p className="text-secondary">{recipe.prep_time} min</p>
                         </div>
-                    </Link>
-                    {isLoggedIn && (
-                        <div className="card-actions justify-end p-4">
-                            <EditRecipe recipe={recipe} />
-                            <DeleteRecipeButton recipe={recipe} />
-                        </div>
-                    )}
-                </div>
-                ))}
+                    ))
+                ) : (
+                    <p className="col-span-full text-center py-10 opacity-60">Keine Rezepte gefunden.</p>
+                )}
             </article>
         </Fragment>
     );

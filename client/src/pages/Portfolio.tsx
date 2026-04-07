@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import MyHeader from "../components/MyHeader";
+import MyFooter from "../components/MyFooter";
 import PersonalInfo from "../components/PersonalInfo";
 import About from "../components/About";
 import ProfessionalExperience from "../components/ProfessionalExperience";
@@ -9,17 +9,20 @@ import Volunteer from "../components/Volunteer";
 
 function Portfolio() {
     return (
-        <>
+        <div className="min-h-screen flex flex-col">
             <MyHeader />
-            <main className="space-y-8 max-w-4xl mx-auto mt-10 ml-6 mr-6  lg:ml-[22vw]">
-                <h1 className="text-3xl font-bold max-w-7xl mt-4">Portfolio</h1>
-                <PersonalInfo />
-                <About />
-                <ProfessionalExperience />
-                <Education />
-                <Volunteer />
+            <main className="flex-grow flex flex-col items-center">
+                <div className="w-full max-w-4xl px-6 py-10 space-y-8">
+                    <h1 className="text-3xl font-bold text-base-content">Portfolio</h1>
+                    <PersonalInfo />
+                    <About />
+                    <ProfessionalExperience />
+                    <Education />
+                    <Volunteer />
+                </div>
             </main>
-        </>
+            <MyFooter />
+        </div>
     );
 }
 

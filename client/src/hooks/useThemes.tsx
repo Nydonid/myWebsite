@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// this useTheme() function is used to detect (listen) for darkmode enabled on the system. required for applicances like StarsBackground in Home.tsx
+// this useTheme() function is used to detect (listen) for darkmode enabled on the system. required for applications like StarsBackground in Home.tsx
 export function useTheme() {
     const [theme, setTheme] = useState('');
 

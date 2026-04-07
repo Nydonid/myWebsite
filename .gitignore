@@ -23,6 +23,7 @@ logs/
 
 # IDE files
 .idea/
+.idea
 /server/.idea
 *.iml
 .vscode/
