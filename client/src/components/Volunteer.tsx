@@ -13,7 +13,7 @@ const Volunteer = () => {
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Ehrenamtlich</h2>
             <div className="overflow-x-auto">
-                <table className="table bg-base-200">
+                <table className="table">
                     <tbody>
                     {volunteer.map((vol, index) => (
                         <tr key={index}>

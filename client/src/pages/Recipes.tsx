@@ -1,22 +1,20 @@
 import MyHeader from "../components/MyHeader";
 import React, { Fragment } from "react";
 import ListRecipes from "../components/ListRecipes";
-import MyFooter from "../components/MyFooter";
 
 function Recipes() {
     return (
-        <div className="min-h-screen flex flex-col">
+        <>
             <MyHeader />
-            <main className="flex-grow flex flex-col items-center">
-                <div className="max-w-full py-10 space-y-8">
-                    <h1 className="text-3xl font-bold text-base-content">Meine Rezepte</h1>
+            <main className="space-y-8 max-w-4xl mx-auto mt-10 ml-6 mr-6  lg:ml-[22vw]">
+                <h1 className="text-3xl font-bold max-w-7xl mt-4">Meine Rezepte</h1>
+                <Fragment>
                     <div className="container mx-auto flex justify-center max-w-screen-lg">
                         <ListRecipes />
                     </div>
-                </div>
+                </Fragment>
             </main>
-            <MyFooter />
-        </div>
+        </>
     );
 }
 

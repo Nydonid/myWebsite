@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-prod.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/mattia/OneDrive/Dokumente/myWebsite" value="363ap7NRlCs6wllmac7Lnm0Nci1" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="chat-panel" value="Claude Haiku 4.5" />
+      <entry key="agent-panel" value="Claude Haiku 4.5" />
+    </selectedModels>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nydonid&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nydonid/myWebsite&quot;,
+    &quot;accountId&quot;: &quot;1834a7ed-820e-4a12-9fe4-4c28d3630bbb&quot;
+  }
+}</component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="363ap7NRlCs6wllmac7Lnm0Nci1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.localhost:80.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mattia/SoftwareProjects/myWebsite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build:css.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/mattia/OneDrive/Dokumente/myWebsite/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/recipe_images" />
+      <recent name="$PROJECT_DIR$/client/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/recipe_images" />
+      <recent name="$PROJECT_DIR$/client/public" />
+      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.localhost:80">
+    <configuration name="localhost:80" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:css" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:css" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build:css" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="JavaScript Debug.localhost:80" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.32098.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c660495-b68a-4694-aee2-7449fa80e2d0" name="Changes" comment="" />
+      <created>1764237890497</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764237890497</updated>
+      <workItem from="1764237892579" duration="7294000" />
+      <workItem from="1764249254025" duration="22000" />
+      <workItem from="1764333325584" duration="1124000" />
+      <workItem from="1764413007592" duration="6408000" />
+      <workItem from="1764675087037" duration="1947000" />
+      <workItem from="1764702678925" duration="2567000" />
+      <workItem from="1764835603824" duration="5349000" />
+      <workItem from="1764957957295" duration="4196000" />
+      <workItem from="1765136127349" duration="878000" />
+      <workItem from="1765138084279" duration="2461000" />
+      <workItem from="1765217559870" duration="5000" />
+      <workItem from="1765279773654" duration="3029000" />
+      <workItem from="1765454503181" duration="7441000" />
+      <workItem from="1765475641727" duration="8114000" />
+      <workItem from="1766253593056" duration="346000" />
+      <workItem from="1768503264705" duration="2924000" />
+      <workItem from="1768507616916" duration="4187000" />
+      <workItem from="1768726000549" duration="9231000" />
+      <workItem from="1768742712472" duration="5503000" />
+      <workItem from="1768763297707" duration="4022000" />
+      <workItem from="1768913422525" duration="10073000" />
+      <workItem from="1768995337523" duration="2487000" />
+      <workItem from="1769024304197" duration="2072000" />
+      <workItem from="1769077650387" duration="2469000" />
+      <workItem from="1769373053042" duration="1601000" />
+      <workItem from="1769543889086" duration="2803000" />
+      <workItem from="1769952317313" duration="2500000" />
+      <workItem from="1769971667413" duration="2221000" />
+      <workItem from="1771008794111" duration="3366000" />
+      <workItem from="1771012434596" duration="137000" />
+      <workItem from="1771163536616" duration="11695000" />
+      <workItem from="1771186286391" duration="3209000" />
+      <workItem from="1771323288328" duration="1101000" />
+      <workItem from="1771324406183" duration="1342000" />
+      <workItem from="1771328754712" duration="3547000" />
+      <workItem from="1772627278123" duration="696000" />
+      <workItem from="1772983947724" duration="1288000" />
+      <workItem from="1773042932382" duration="623000" />
+      <workItem from="1773426987337" duration="3000" />
+      <workItem from="1773691034147" duration="2361000" />
+      <workItem from="1773828694158" duration="2763000" />
+      <workItem from="1773920233527" duration="178000" />
+      <workItem from="1774084804446" duration="1881000" />
+      <workItem from="1774122080613" duration="2124000" />
+      <workItem from="1774425645737" duration="35000" />
+      <workItem from="1774543254570" duration="484000" />
+      <workItem from="1774897057411" duration="622000" />
+      <workItem from="1774898148663" duration="4603000" />
+      <workItem from="1774902837885" duration="1425000" />
+      <workItem from="1775028587640" duration="1082000" />
+    </task>
+    <task id="LOCAL-00001" summary="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes">
+      <option name="closed" value="true" />
+      <created>1771173957257</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771173957257</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added new logo.pgn pictures">
+      <option name="closed" value="true" />
+      <created>1771189317073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771189317073</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added eggplant mincedmeat">
+      <option name="closed" value="true" />
+      <created>1771270580925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771270580925</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge branch 'dev'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1772300594545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772300594545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finally fixed and cleaned tailwindcss (downgrade to v3.4.4). other minor fixes" />
+    <MESSAGE value="added new logo.pgn pictures" />
+    <MESSAGE value="added eggplant mincedmeat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added eggplant mincedmeat" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

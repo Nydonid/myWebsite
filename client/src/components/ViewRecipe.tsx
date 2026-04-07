@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {Ingredient, Recipe} from "../RecipeInterface";
 
@@ -34,8 +34,8 @@ function ViewRecipe() {
     console.log(recipe?.ingredients[1]);
 
     return (
-        <div>
-            <article className="space-y-4">
+        <div className="space-y-8 max-w-4xl mx-auto mt-10 ml-6 mr-6 lg:ml-[22vw]">
+            <div className="space-y-4">
                 {recipe.imageurls && recipe.imageurls.length > 0 && (
                     <img
                         src={recipe.imageurls[0]}
@@ -46,9 +46,9 @@ function ViewRecipe() {
                 <h1 className="text-3xl font-bold text-primary">{recipe.title}</h1>
                 <p className="text-secondary">{recipe.prep_time} min</p>
                 <p className="text-base-content">{recipe.description}</p>
-            </article>
-            <article className="space-y-6">
-                <h2 className="text-xl font-semibold text-primary mb-2 mt-4">Zutaten:</h2>
+            </div>
+            <div className="space-y-6">
+                <h2 className="text-xl font-semibold text-primary mb-2">Zutaten:</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <ul className="list-disc list-inside space-y-2">
                         {recipe.ingredients
@@ -75,7 +75,7 @@ function ViewRecipe() {
                         ))}
                     </ol>
                 </div>
-            </article>
+            </div>
         </div>
     );
 }
