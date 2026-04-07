@@ -7,10 +7,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-  manual-approval:
-    name: Manual Approval
-    runs-on: ubuntu-latest
+    environment:
+      name: production
 
     steps:
       - name: Checkout repo
@@ -29,5 +27,5 @@ jobs:
               cd ~/myWebsite &&
               docker compose pull &&
               docker compose down &&
-              docker compose up --build -d --remove-orphans
+              docker compose up -d --remove-orphans
             "
