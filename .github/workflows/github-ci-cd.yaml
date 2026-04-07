@@ -27,5 +27,5 @@ jobs:
               cd ~/myWebsite &&
               docker compose pull &&
               docker compose down &&
-              docker compose up -d --remove-orphans
+              docker compose -f docker-compose.prod.yaml up --build -d
             "
