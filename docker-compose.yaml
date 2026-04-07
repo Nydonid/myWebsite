@@ -27,7 +27,7 @@ services:
       dockerfile: Dockerfile
     container_name: ApiServer
     env_file:
-      - ./server/.env.production
+      - ./server/.env.local
     ports:
       - "127.0.0.1:5000:5000"
     labels:
@@ -68,7 +68,7 @@ services:
     image: postgres:16
     container_name: RecipesDB
     env_file:
-      - ./server/.env.production
+      - ./server/.env.local
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./server/init:/docker-entrypoint-initdb.d
