@@ -4,10 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-manual-approval:
-  name: Manual approval to ship to prod
-  runs-on: ubuntu-latest
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
