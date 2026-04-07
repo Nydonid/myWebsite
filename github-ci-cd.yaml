@@ -1,0 +1,39 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ "main" ]
+
+manual-approval:
+  name: Manual approval to ship to prod
+  runs-on: ubuntu-latest
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/key
+          chmod 400 ~/.ssh/key
+
+      - name: Copy files to server
+        run: |
+            docker pull
+            docker-compose.prod.yaml .env.prod \
+            ${{ secrets.USER }}@${{ secrets.HOST }}:~/myWebsite/
+
+      - name: Deploy via SSH
+        run: |
+          ssh -i ~/.ssh/key -o StrictHostKeyChecking=no \
+            ${{ secrets.USER }}@${{ secrets.HOST }} "
+              cd ~/myWebsite &&
+              docker compose pull &&
+              docker compose down &&
+              docker compose up -d --remove-orphans
+            "
