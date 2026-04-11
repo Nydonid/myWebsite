@@ -24,7 +24,7 @@ services:
   api:
     build:
       context: ./server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-prod
     container_name: ApiServer
     env_file:
       - ./server/.env.production
