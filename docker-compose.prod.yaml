@@ -38,6 +38,8 @@ services:
       - traefik.http.services.api.loadbalancer.server.port=5000
     depends_on:
       - db
+    environment:
+      NODE_ENV: production
 
   app:
     build:
