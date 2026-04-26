@@ -13,8 +13,8 @@ const Education = () => {
     return (
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Ausbildung</h2>
-            <div className="overflow-x-auto">
-                <table className="table bg-base-200">
+            <div className="grid grid-cols-2 gap-4 border-2 border-base-300 rounded-lg p-1 dark:border-none dark:bg-base-200">
+                <table className="table">
                     <tbody>
                     {education.map((edu, index) => (
                         <tr key={index}>

@@ -41,10 +41,10 @@ const ListRecipes = () => {
 
     return (
         <Fragment>
-            <article className="grid grid-cols-1 lg:grid-cols-2 items-stretch justify-items-center">
+            <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
                 {recipes.length > 0 ? (
                     recipes.map((recipe) => (
-                        <div key={recipe.recipe_id} className="card bg-base-200 hover:bg-base-300 rounded-lg m-4 shadow-sm transition-shadow">
+                        <div key={recipe.recipe_id} className="card max-w-96 border-2 border-base-300 p-1 dark:border-none dark:bg-base-200 hover:bg-base-200 dark:hover:bg-base-300 rounded-lg m-4 shadow-sm transition-shadow">
                             <Link to={`/recipes/${recipe.recipe_id}`}>
                                 <figure className="px-4 pt-4">
                                     {recipe.imageurls && recipe.imageurls.length > 0 && (
