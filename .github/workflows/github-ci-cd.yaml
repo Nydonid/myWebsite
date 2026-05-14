@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   manual-approval:
@@ -11,7 +11,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: your-github-username
+          approvers: Nydonid
 
   deploy:
     name: Deploy to Prod
