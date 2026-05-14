@@ -2,6 +2,9 @@ on:
   push:
     branches: [ "master" ]
 
+permissions:
+  issues: write
+
 jobs:
   manual-approval:
     name: Manual Approval
