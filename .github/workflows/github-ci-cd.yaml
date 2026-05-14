@@ -10,7 +10,7 @@ jobs:
       - name: Wait for approval
         uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ github.TOKEN }}
+          secret: ${{ secrets.GITHUB_TOKEN}}
           approvers: Nydonid
 
   deploy:
