@@ -1,5 +1,5 @@
 require('dotenv').config({
-    path: process.env.NODE_ENV === 'production' ? '.env' : '.env.local'
+    path: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.dev'
 });
 
 const express = require("express");
@@ -14,7 +14,6 @@ const port = 5000;
 //middleware
 app.use(express.json()); //req.body
 app.use(cors());
-
 
 // middleware to verify JWT
 const authenticateToken = (req, res, next) => {
@@ -52,19 +51,19 @@ api.post("/recipes", authenticateToken, async (req, res) => {
     try {
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body; // define attributes which can be set to push recipe to db
         if (!title || !ingredients?.length || !instructions?.length) { // return error 400 if NOT NULL attributes are not set.
-            return res.status(400).json({ error: "Title, ingredients, and insert_recipes are required" });
+            return res.status(400).json({ error: "Title, ingredients, and instructions are required" });
         }
-/*        const newRecipe = await pool.query( // add attributes from form to db
-            "INSERT INTO recipes (title, prep_time, description, insert_recipes, imageURLs) VALUES($1, $2, $3, $4, $5) RETURNING *",
-            [title, prep_time, description, insert_recipes, imageURLs || []]
-        );
-        const recipeId = newRecipe.rows[0].recipe_id;*/
+        /*        const newRecipe = await pool.query( // add attributes from form to db
+                    "INSERT INTO recipes (title, prep_time, description, insert_recipes, imageurls) VALUES($1, $2, $3, $4, $5) RETURNING *",
+                    [title, prep_time, description, insert_recipes, imageURLs || []]
+                );
+                const recipeId = newRecipe.rows[0].recipe_id;*/
 
         const client = await pool.connect();
         try {
             await client.query("BEGIN");
             const newRecipe = await client.query(
-                "INSERT INTO recipes (title, prep_time, description, insert_recipes, imageurls) VALUES($1, $2, $3, $4, $5) RETURNING *",
+                "INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES($1, $2, $3, $4, $5) RETURNING *",
                 [title, prep_time, description, instructions, imageurls || []]
             );
             const recipeId = newRecipe.rows[0].recipe_id;
@@ -86,7 +85,7 @@ api.post("/recipes", authenticateToken, async (req, res) => {
         } finally {
             client.release();
         }
-        res.json(newRecipe.rows[0]);
+       // res.json(newRecipe.rows[0]);
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ error: "Server error" });
@@ -96,11 +95,11 @@ api.post("/recipes", authenticateToken, async (req, res) => {
 //get all recipes (for recipes list)
 api.get("/recipes", async (req, res) => {
     try {
-        const allRecipes = await pool.query("SELECT recipe_id, title, prep_time, imageURLs FROM recipes"); // TODO find solution to pass only first image correctly
+        const allRecipes = await pool.query("SELECT recipe_id, title, prep_time, imageurls FROM recipes");
         res.json(allRecipes.rows || []);
     } catch (err) {
         console.error(err.message);
-        res.status(500).json({ error: "Server error" });
+        res.status(500).json({ error: "Server error" + err.message });
     }
 });
 
@@ -109,14 +108,10 @@ api.get("/recipes/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const recipe = await pool.query(
-/*
-            "SELECT r.* FROM recipes r WHERE recipe_id = $1,"
-*/
             "SELECT r.*, ARRAY_AGG(ROW_TO_JSON(i)) AS ingredients FROM recipes r LEFT JOIN ingredients i ON r.recipe_id = i.recipe_id WHERE r.recipe_id = $1 GROUP BY r.recipe_id",
-             [
-            id
-        ]);
-        res.json(recipe.rows[0] || []);
+             [id]
+        );
+        res.json(recipe.rows[0] || {});
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ error: "Server error" });
@@ -125,45 +120,44 @@ api.get("/recipes/:id", async (req, res) => {
 
 //update a recipe
 api.put("/recipes/:id", authenticateToken, async (req, res) => {
+    let client;
     try {
         const { id } = req.params;
         const { title, prep_time, description, instructions, imageurls, ingredients } = req.body;
 
-        console.log("PUT request body:", req.body);
-        console.log("Ingredients:", ingredients);
-        console.log("Image URLs:", imageurls);
+        client = await pool.connect();
+        await client.query("BEGIN");
 
-        const client = await pool.connect();
-        try {
-            await client.query("BEGIN");
-            const updateRecipe = await client.query(
-                "UPDATE recipes SET title = $1, prep_time = $2, description = $3, insert_recipes = $4, imageurls = $5 WHERE recipe_id = $6 RETURNING *",
-                [title, prep_time, description, instructions, imageurls || [], id]
+        await client.query(
+            "UPDATE recipes SET title = $1, prep_time = $2, description = $3, instructions = $4, imageurls = $5 WHERE recipe_id = $6",
+            [title, prep_time, description, instructions, imageurls || [], id]
+        );
+        
+        await client.query("DELETE FROM ingredients WHERE recipe_id = $1", [id]);
+        
+        for (const { amount, unit, name } of ingredients) {
+            await client.query(
+                "INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES($1, $2, $3, $4)",
+                [id, amount, unit || null, name]
             );
-            await client.query("DELETE FROM ingredients WHERE recipe_id = $1", [id]);
-            for (const { amount, unit, name } of ingredients) {
-                await client.query(
-                    "INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES($1, $2, $3, $4)",
-                    [id, amount, unit || null, name]
-                );
-            }
-
-            await client.query("COMMIT");
-            const fullRecipe = await client.query(
-                "SELECT r.*, ARRAY_AGG(ROW_TO_JSON(i)) AS ingredients FROM recipes r LEFT JOIN ingredients i ON r.recipe_id = i.recipe_id WHERE r.recipe_id = $1 GROUP BY r.recipe_id",
-                [id]
-            );
-            res.json(fullRecipe.rows[0] || {});
-
-        } catch (err) {
-            await client.query("ROLLBACK");
-            throw err;
-        } finally {
-            client.release();
         }
+
+        await client.query("COMMIT");
+        
+        const fullRecipe = await client.query(
+            "SELECT r.*, ARRAY_AGG(ROW_TO_JSON(i)) AS ingredients FROM recipes r LEFT JOIN ingredients i ON r.recipe_id = i.recipe_id WHERE r.recipe_id = $1 GROUP BY r.recipe_id",
+            [id]
+        );
+        res.json(fullRecipe.rows[0] || {});
+
     } catch (err) {
-        console.error(err.message);
-        res.status(500).json({ error: "Server error" });
+        if (client) await client.query("ROLLBACK");
+        console.error("Error in PUT /api/recipes/:id:", err.message);
+        if (!res.headersSent) {
+            res.status(500).json({ error: "Server error", details: err.message });
+        }
+    } finally {
+        if (client) client.release();
     }
 });
 
@@ -171,9 +165,7 @@ api.put("/recipes/:id", authenticateToken, async (req, res) => {
 api.delete("/recipes/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
-        const deleteRecipe = await pool.query("DELETE FROM recipes WHERE recipe_id = $1", [
-            id
-        ]);
+        await pool.query("DELETE FROM recipes WHERE recipe_id = $1", [id]);
         res.json(`Recipe was deleted!`);
     } catch (err) {
         console.log(err.message);

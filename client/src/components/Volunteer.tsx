@@ -12,7 +12,7 @@ const Volunteer = () => {
     return (
         <article className="space-y-4">
             <h2 className="text-xl font-semibold text-primary">Ehrenamtlich</h2>
-            <div className="overflow-x-auto">
+            <div className="grid grid-cols-2 gap-4 border-2 border-base-300 rounded-lg p-1 dark:border-none dark:bg-base-200">
                 <table className="table">
                     <tbody>
                     {volunteer.map((vol, index) => (

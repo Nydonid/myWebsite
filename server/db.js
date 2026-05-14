@@ -1,4 +1,4 @@
-const Pool = require("pg").Pool;
+const { Pool } = require("pg");
 require('dotenv').config();
 
 const pool = new Pool({
@@ -6,7 +6,11 @@ const pool = new Pool({
     password: process.env.DB_PASSWORD,
     host: process.env.DB_HOST,
     port: 5432,
-    database: 'recipes_db'
-})
+    database: process.env.DB_NAME
+});
+
+pool.on('error', (err) => {
+    console.error('Unexpected error on idle client', err);
+});
 
 module.exports = pool;

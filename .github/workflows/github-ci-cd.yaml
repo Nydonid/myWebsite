@@ -1,0 +1,36 @@
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  manual-approval:
+    name: Manual Approval
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for approval
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: your-github-username
+
+  deploy:
+    name: Deploy to Prod
+    runs-on: ubuntu-latest
+    needs: manual-approval
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/key
+          chmod 400 ~/.ssh/key
+      - name: Deploy to prod via SSH
+        run: |
+          ssh -i ~/.ssh/key -o StrictHostKeyChecking=no \
+            ${{ secrets.USER }}@${{ secrets.HOST }} "
+              cd ~/myWebsite &&
+              docker compose pull &&
+              docker compose down &&
+              docker compose up --build -d --remove-orphans
+            "

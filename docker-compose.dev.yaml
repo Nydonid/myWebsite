@@ -24,12 +24,16 @@ services:
   api:
     build:
       context: ./server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     container_name: ApiServer
     env_file:
+<<<<<<<< HEAD:docker-compose.dev.yaml
+      - ./server/.env.dev
+========
       - ./server/.env.local
+>>>>>>>> 0580f2bce3f6af989520d103b7420e5c1b1f0e1d:docker-compose.yaml
     ports:
-      - "127.0.0.1:5000:5000"
+      - "5000:5000"
     labels:
       - traefik.enable=true
 #      - traefik.http.routers.api.rule=Host(`mattia.gr`) || Host(`www.mattia.gr`) && PathPrefix(`/api`)
@@ -41,6 +45,8 @@ services:
       - traefik.http.services.api.loadbalancer.server.port=5000
     depends_on:
       - db
+    environment:
+      NODE_ENV: dev
 
   app:
     build:
@@ -68,7 +74,11 @@ services:
     image: postgres:16
     container_name: RecipesDB
     env_file:
+<<<<<<<< HEAD:docker-compose.dev.yaml
+      - ./server/.env.dev
+========
       - ./server/.env.local
+>>>>>>>> 0580f2bce3f6af989520d103b7420e5c1b1f0e1d:docker-compose.yaml
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./server/init:/docker-entrypoint-initdb.d
