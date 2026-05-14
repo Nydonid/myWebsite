@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer utilities {
+    .animate-blink {
+        animation: blink 1100ms step-end infinite;
+    }
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
     .stars-bg {
         position: absolute;
         top: auto;
@@ -19,7 +25,7 @@
         animation: moveStar linear infinite;
     }
     @keyframes moveStar {
-        from { transform: translateY(0vh); }
+        from { transform: translateY(0); }
         to { transform: translateY(100vh); }
     }
 }

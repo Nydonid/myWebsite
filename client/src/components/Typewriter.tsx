@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 function Typewriter() {
-    const words = ['Allegra', 'Salii', 'Morgee'];
+    const words = ['Ciaoo', 'Salii', 'Morgee'];
     const [index, setIndex] = useState(0);
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -34,7 +34,7 @@ function Typewriter() {
     }, [text, isDeleting, index, words]);
 
     return (
-        <h1 className="text-primary text-5xl sm:text-6xl md:text-7xl font-bold" aria-label="Welcome Message">
+        <h1 className="text-primary text-4xl sm:text-7xl md:text-6xl font-bold" aria-label="Welcome Message">
         <span aria-hidden="true">{text}</span>
             <span className="animate-blink">|</span>
         </h1>

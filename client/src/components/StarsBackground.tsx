@@ -4,20 +4,21 @@ interface StarsBackgroundProps {
     className?: string;
 }
 
-const StarsBackground: React.FC<StarsBackgroundProps> = () => {const stars = Array.from({length: 160}).map((_, i) => (
+const StarsBackground: React.FC<StarsBackgroundProps> = ({ className }) => {    const stars = Array.from({length: 50}).map((_, i) => (
         <div
             key={i}
             className="star"
             style={{
-                width: `${Math.random() * 2 + 1}px`,
-                height: `${Math.random() * 2 + 1}px`,
+                width: `${Math.random() * 3 + 2}px`,
+                height: `${Math.random() * 3 + 2}px`,
                 left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 12 + 7}s`,
+                animationDuration: `${Math.random() * 10 + 8}s`,
                 animationDelay: `${Math.random() * -15}s`,
-                opacity: Math.random() * 0.2 + 0.8,
+                opacity: Math.random() * 0.5 + 0.3,
             }}
         />
     ));
+
     return <div className="stars-bg">{stars}</div>;
 }
 

@@ -604,3 +604,42 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (18, 1, 'Bund', 'Schnittlauch oder Peterli'),
         (18, NULL, NULL, 'Pfeffer'),
         (18, NULL, NULL, 'Reibkäse (z. B. Sbrinz)');
+
+INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
+    (
+        'Poulet Sweet Sour',
+        40,
+        'Richtiger Hit! Absolut frisch, schmeckt richtig gut und ist verhältnissmässig einfach zu kochen. Man braucht sich nur ans Rezept zu halten ;). Für 3-4 Portionen, mit Betty Bossi als Vorlage.',
+        ARRAY[
+            'Reis in einem Sieb unter kaltem Wasser spülen, bis das Wasser klar ist.',
+        'Reis mit Wasser aufkochen und zugedeckt bei kleinster Hitze ca. 15 Minuten quellen lassen, salzen.',
+        'Bundzwiebeln in Ringe schneiden, Grün beiseite stellen. Peperoncini entkernen und in Ringe schneiden. Mango schälen und würfeln.',
+        'Sesamöl in einer Pfanne erhitzen. Poulet portionenweise anbraten, herausnehmen und warm stellen.',
+        'Bundzwiebeln ohne Grün, Peperoncini und Mango in derselben Pfanne kurz stark rührbraten. Regelmässig umrühren.',
+        '2 EL Maizena mit 2dl Bouillon anrühren, mit 3 ELEssig, 1.5 EL Sojasauce, 1 EL Zucker und 3 EL Ketchup mischen und dann dazugiessen.',
+        'Aufkochen, Poulet wieder beigeben und ca. 5 Minuten auf tiefer Stufe köcheln lassen.',
+        'Mit Bundzwiebelgrün bestreuen und mit dem Reis servieren.'
+            ],
+        ARRAY[
+        'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/sweetsour_chicken_recipe.jpg',
+        'https://raw.githubusercontent.com/Nydonid/myWebsite/master/assets/recipe_images/sweetsour_chicken_ingredients.jpg'
+            ]
+    );
+
+INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
+        (19, 300, 'g', 'Basmatireis (knapp 2 Tassen)'),
+        (19, 6, 'dl', 'Wasser (doppelt so viel wie Reis in Tassen)'),
+        (19, 0.5, 'TL', 'Salz'),
+
+        (19, 4, NULL, 'Bundzwiebeln'),
+        (19, 1, NULL, 'roter Peperoncini'),
+        (19, 1, NULL, 'Mango'),
+        (19, NULL, NULL, 'Sesam-Öl zum Braten'),
+        (19, 350, 'g', 'Pouletbrustwürfel'),
+
+        (19, 2, 'EL', 'Maizena'),
+        (19, 2, 'dl', 'Bouillon'),
+        (19, 3, 'EL', 'Essig'),
+        (19, 1.5, 'EL', 'Sojasauce'),
+        (19, 1, 'EL', 'Zucker'),
+        (19, 3, 'EL', 'Ketchup');
