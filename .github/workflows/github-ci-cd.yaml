@@ -9,9 +9,11 @@ jobs:
   manual-approval:
     name: Manual Approval
     runs-on: ubuntu-latest
+
     steps:
       - name: Wait for approval
         uses: trstringer/manual-approval@v1
+
         with:
           secret: ${{ secrets.GITHUB_TOKEN}}
           approvers: Nydonid
@@ -19,20 +21,20 @@ jobs:
   deploy:
     name: Deploy to Prod
     runs-on: ubuntu-latest
+
     needs: manual-approval
     environment: production
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-      - name: Setup SSH
+      - uses: actions/checkout@v4
+      - env:
+          KEY: ${{ secrets.SSH_KEY }}
+          USER: ${{ secrets.SSH_KEY }}
+          HOST: ${{ secrets.HOST }}
+
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/key
-          chmod 400 ~/.ssh/key
-      - name: Deploy to prod via SSH
-        run: |
-          ssh -i ~/.ssh/key -o StrictHostKeyChecking=no \
-            ${{ secrets.USER }}@${{ secrets.HOST }} "
+          echo "KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER}@${HOST} '
+          
               cd ~/myWebsite &&
               docker compose pull &&
               docker compose down &&
