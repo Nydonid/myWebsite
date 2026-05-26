@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  manual-approval:
+    name: Manual Approval
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Wait for approval
+        uses: trstringer/manual-approval@v1
+
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN}}
+          approvers: Nydonid
+
+  deploy:
+    runs-on: self-hosted
+    name: Deploy
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Copy env file
+        run: cp /home/ins/.env .env
+
+      - name: Build and deploy
+        run: docker compose up --build -d
