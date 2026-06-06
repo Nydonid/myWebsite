@@ -35,5 +35,8 @@ jobs:
       - name: Copy env file
         run: cp /root/myWebsite/server/.env.production server/.env.production
 
+      - name: Fix acme.json permissions
+        run: touch acme.json && chmod 600 acme.json
+
       - name: Build and deploy
         run: docker compose -f docker-compose.prod.yaml up --build -d
