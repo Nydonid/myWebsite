@@ -39,4 +39,4 @@ jobs:
         run: touch acme.json && chmod 600 acme.json
 
       - name: Build and deploy
-        run: docker compose -f docker-compose.prod.yaml up --build -d
+        run: docker compose down && docker compose -f docker-compose.prod.yaml up --build -d
