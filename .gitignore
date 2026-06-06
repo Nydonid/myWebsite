@@ -13,6 +13,8 @@ package-lock.json
 /client/.env.local
 /client/.env.production
 
+.github/workflows/deploy.yaml
+
 # Build output
 # /client/build/
 /client/dist/

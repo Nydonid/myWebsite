@@ -6,9 +6,6 @@ on:
       - master
   workflow_dispatch:
 
-permissions:
-  issues: write
-
 jobs:
   manual-approval:
     name: Manual Approval
@@ -20,12 +17,11 @@ jobs:
 
         with:
           secret: ${{ secrets.GITHUB_TOKEN}}
-          approvers: Nydonid
+          approvers: GITHUB_USER_NAME
 
   deploy:
     runs-on: self-hosted
     name: Deploy
-    needs: manual-approval
     timeout-minutes: 10
 
     steps:
@@ -33,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Copy env file
-        run: cp /root/.env .env
+        run: cp /home/USER/.env .env
 
       - name: Build and deploy
         run: docker compose up --build -d
