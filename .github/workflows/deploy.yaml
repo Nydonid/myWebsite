@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy-myWebsite-Production
 
 on:
   push:
