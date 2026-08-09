@@ -7,7 +7,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     const [prep_time, setPrepTime] = useState(recipe.prep_time);
     const [description, setDescription] = useState(recipe.description);
     const [instructions, setInstructions] = useState(recipe.instructions ? recipe.instructions.join("; ") : ""); // Fallback to "", as undefined couldn't be split()
-    const [imageURLs, setImageURLs] = useState(recipe.imageurls ? recipe.imageurls.join(", ") : "");
+    const [imageURLs, setImageURLs] = useState(recipe.imageurls ? recipe.imageurls.join("; ") : "");
     const [ingredients, setIngredients] = useState<Ingredient[]>(
         recipe.ingredients && recipe.ingredients.length > 0
             ? recipe.ingredients
@@ -30,12 +30,12 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 prep_time: prep_time || null,
                 description: description || null,
                 instructions: instructions.split(";").map((item) => item.trim()),
-                imageurls: imageURLs.split(",").map((item) => item.trim()),
+                imageurls: imageURLs.split(";").map((item) => item.trim()),
                 ingredients,
             };
 
             const apiUrl = process.env.REACT_APP_API_URL || "";
-            await fetch(`${apiUrl}/api/recipes/${recipe.recipe_id}`, {
+            const res = await fetch(`${apiUrl}/api/recipes/${recipe.recipe_id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -44,11 +44,16 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 body: JSON.stringify(body),
             });
 
+            if (!res.ok) { // surface backend errors instead of silently reloading
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || `Request failed (${res.status})`);
+            }
+
             window.location.reload();
 
         } catch (err: unknown) {
             console.error(err instanceof Error ? err.message : "Unknown error");
-            alert("Error updating recipe");
+            alert(`Error updating recipe: ${err instanceof Error ? err.message : "Unknown error"}`);
         }
     };
 
@@ -83,7 +88,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                                       onChange={(e) => setDescription(e.target.value)}/>
                             <textarea className="textarea textarea-bordered w-full mb-2" placeholder="Instructions (semicolon-separated)" value={instructions}
                                       onChange={(e) => setInstructions(e.target.value)}/>
-                            <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (comma-separated)" value={imageURLs}
+                            <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (semicolon-separated)" value={imageURLs}
                                    onChange={(e) => setImageURLs(e.target.value)}/>
                             {ingredients.map((ingredient, index) => (
                                 <div key={index} className="mb-2">

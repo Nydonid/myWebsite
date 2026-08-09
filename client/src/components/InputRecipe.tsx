@@ -31,7 +31,7 @@ const InputRecipe = () => {
             };
 
             const apiUrl = process.env.REACT_APP_API_URL || "";
-            await fetch(`${apiUrl}/api/recipes`, {
+            const res = await fetch(`${apiUrl}/api/recipes`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -40,11 +40,16 @@ const InputRecipe = () => {
                 body: JSON.stringify(body),
             });
 
+            if (!res.ok) { // surface backend errors instead of silently reloading
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || `Request failed (${res.status})`);
+            }
+
             window.location.reload();
 
         } catch (err: unknown) {
             console.error(err instanceof Error ? err.message : "Unknown error");
-            alert("Error inserting new recipe");
+            alert(`Error inserting new recipe: ${err instanceof Error ? err.message : "Unknown error"}`);
         }
     };
 
@@ -72,10 +77,10 @@ const InputRecipe = () => {
                     <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Description" value={description}
                               onChange={(e) => setDescription(e.target.value)}
                     />
-                    <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Instructions (comma-separated)" value={instructions}
+                    <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Instructions (semicolon-separated)" value={instructions}
                               onChange={(e) => setInstructions(e.target.value)}
                     />
-                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (comma-separated)" value={imageURLs}
+                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (semicolon-separated)" value={imageURLs}
                            onChange={(e) => setImageURLs(e.target.value)}
                     />
                     {ingredients.map((ingredient, index) => (
