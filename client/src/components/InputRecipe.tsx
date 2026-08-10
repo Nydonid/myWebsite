@@ -26,7 +26,7 @@ const InputRecipe = () => {
                 prep_time: prep_time || null,
                 description,
                 instructions: instructions.split(";").map((item) => item.trim()),
-                imageurls: imageURLs.split(";").map((item) => item.trim()),
+                imageurls: imageURLs.split(/[;,]/).map((item) => item.trim()).filter(Boolean), // URLs never contain , or ; so accept either separator
                 ingredients,
             };
 
@@ -80,7 +80,7 @@ const InputRecipe = () => {
                     <textarea className="textarea textarea-bordered w-full mb-1" placeholder="Instructions (semicolon-separated)" value={instructions}
                               onChange={(e) => setInstructions(e.target.value)}
                     />
-                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (semicolon-separated)" value={imageURLs}
+                    <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (comma or semicolon separated)" value={imageURLs}
                            onChange={(e) => setImageURLs(e.target.value)}
                     />
                     {ingredients.map((ingredient, index) => (

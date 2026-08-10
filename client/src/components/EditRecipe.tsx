@@ -15,6 +15,37 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     );
     const [isOpen, setIsOpen] = useState(false);
 
+    // The list endpoint (GET /recipes) only returns recipe_id, title, prep_time, imageurls,
+    // so description/instructions/ingredients are missing from the `recipe` prop.
+    // Fetch the full recipe when the modal opens and populate the form.
+    useEffect(() => {
+        if (!isOpen) return;
+        let cancelled = false;
+        (async () => {
+            try {
+                const apiUrl = process.env.REACT_APP_API_URL || "";
+                const res = await fetch(`${apiUrl}/api/recipes/${recipe.recipe_id}`);
+                if (!res.ok) throw new Error(`Request failed (${res.status})`);
+                const full: Recipe = await res.json();
+                if (cancelled) return;
+                setTitle(full.title || "");
+                setPrepTime(full.prep_time || "");
+                setDescription(full.description || "");
+                setInstructions(full.instructions ? full.instructions.join("; ") : "");
+                setImageURLs(full.imageurls ? full.imageurls.join("; ") : "");
+                const ings = (full.ingredients || []).filter(Boolean); // LEFT JOIN can yield [null]
+                setIngredients(
+                    ings.length > 0
+                        ? ings
+                        : [{ ingredient_id: 0, recipe_id: recipe.recipe_id, amount: 0, unit: null, name: "" }]
+                );
+            } catch (err: unknown) {
+                console.error(err instanceof Error ? err.message : "Unknown error");
+            }
+        })();
+        return () => { cancelled = true; };
+    }, [isOpen, recipe.recipe_id]);
+
     const onSubmitFormEdit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!title || !ingredients || !instructions) { // Additional to backend check in index.js; for required attributes in Frontend
@@ -30,7 +61,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                 prep_time: prep_time || null,
                 description: description || null,
                 instructions: instructions.split(";").map((item) => item.trim()),
-                imageurls: imageURLs.split(";").map((item) => item.trim()),
+                imageurls: imageURLs.split(/[;,]/).map((item) => item.trim()).filter(Boolean), // URLs never contain , or ; so accept either separator
                 ingredients,
             };
 
@@ -88,7 +119,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
                                       onChange={(e) => setDescription(e.target.value)}/>
                             <textarea className="textarea textarea-bordered w-full mb-2" placeholder="Instructions (semicolon-separated)" value={instructions}
                                       onChange={(e) => setInstructions(e.target.value)}/>
-                            <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (semicolon-separated)" value={imageURLs}
+                            <input type="text" className="input input-bordered w-full mb-2" placeholder="Image URLs (comma or semicolon separated)" value={imageURLs}
                                    onChange={(e) => setImageURLs(e.target.value)}/>
                             {ingredients.map((ingredient, index) => (
                                 <div key={index} className="mb-2">

@@ -456,8 +456,6 @@ INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
         (12, NULL, NULL, 'Bratcrème');
 
 
--- Attention, Hörnli mit ghackets went missing.
-
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
         'Maluns',
@@ -474,11 +472,11 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (14, 1, 'kg', 'Gschwellti vom Vortag, mehligkochend'),
-        (14, 300, 'g', 'Mehl'),
-        (14, 100, 'g', 'Butter'),
-        (14, NULL, NULL, 'Pfeffer'),
-        (14, NULL, NULL, 'Salz');
+        (13, 1, 'kg', 'Gschwellti vom Vortag, mehligkochend'),
+        (13, 300, 'g', 'Mehl'),
+        (13, 100, 'g', 'Butter'),
+        (13, NULL, NULL, 'Pfeffer'),
+        (13, NULL, NULL, 'Salz');
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
@@ -502,17 +500,17 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (15, 2, NULL, 'Zwieble'),
-        (15, 2, NULL, 'Knoblauchzehe'),
-        (15, 300, 'g', 'festkochendi Herdöpfel'),
-        (15, 100, 'g', 'Speckwürfeli'),
-        (15, 3.5, 'dl', 'Wasser'),
-        (15, 1, 'EL', 'Bouillon'),
-        (15, 2, 'dl', 'Rahm'),
-        (15, 250, 'g', 'Magrone'),
-        (15, 45, 'g', 'Gruyère'),
-        (15, NULL, NULL, 'Salz'),
-        (15, NULL, NULL, 'Pfeffer');
+        (14, 2, NULL, 'Zwieble'),
+        (14, 2, NULL, 'Knoblauchzehe'),
+        (14, 300, 'g', 'festkochendi Herdöpfel'),
+        (14, 100, 'g', 'Speckwürfeli'),
+        (14, 3.5, 'dl', 'Wasser'),
+        (14, 1, 'EL', 'Bouillon'),
+        (14, 2, 'dl', 'Rahm'),
+        (14, 250, 'g', 'Magrone'),
+        (14, 45, 'g', 'Gruyère'),
+        (14, NULL, NULL, 'Salz'),
+        (14, NULL, NULL, 'Pfeffer');
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
@@ -535,16 +533,16 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (16, 2, NULL, 'Olma-Bratwürste'),
-        (16, 2, NULL, 'grosse Zwiebeln'),
-        (16, NULL, NULL, 'Butter'),
-        (16, 1, 'EL', 'Mehl'),
-        (16, 1, 'EL', 'Tomatenpüree'),
-        (16, 0.75, 'dl', 'Rotwein'),
-        (16, 0.75, 'dl', 'Wasser'),
-        (16, 1, 'TL', 'Bouillon'),
-        (16, NULL, NULL, 'Salz'),
-        (16, NULL, NULL, 'Pfeffer');
+        (15, 2, NULL, 'Olma-Bratwürste'),
+        (15, 2, NULL, 'grosse Zwiebeln'),
+        (15, NULL, NULL, 'Butter'),
+        (15, 1, 'EL', 'Mehl'),
+        (15, 1, 'EL', 'Tomatenpüree'),
+        (15, 0.75, 'dl', 'Rotwein'),
+        (15, 0.75, 'dl', 'Wasser'),
+        (15, 1, 'TL', 'Bouillon'),
+        (15, NULL, NULL, 'Salz'),
+        (15, NULL, NULL, 'Pfeffer');
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
@@ -566,13 +564,13 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (17, 275, 'g', 'Spaghetti'),
-        (17, 3, NULL, 'Eier'),
-        (17, 1, NULL, 'Zwiebel'),
-        (17, 80, 'g', 'geriebener Käse wie z.B. Sbrinz'),
-        (17, 100, 'g', 'Specktrangen'),
-        (17, NULL, NULL, 'Pfeffer'),
-        (17, NULL, NULL, 'Salzwasser');
+        (16, 275, 'g', 'Spaghetti'),
+        (16, 3, NULL, 'Eier'),
+        (16, 1, NULL, 'Zwiebel'),
+        (16, 80, 'g', 'geriebener Käse wie z.B. Sbrinz'),
+        (16, 100, 'g', 'Specktrangen'),
+        (16, NULL, NULL, 'Pfeffer'),
+        (16, NULL, NULL, 'Salzwasser');
 
 INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VALUES
     (
@@ -595,12 +593,47 @@ INSERT INTO recipes (title, prep_time, description, instructions, imageurls) VAL
     );
 
 INSERT INTO ingredients (recipe_id, amount, unit, name) VALUES
-        (18, 250, 'g', 'Pasta (z. B. Spaghetti)'),
-        (18, NULL, NULL, 'Salz'),
-        (18, 1, NULL, 'Zitrone (Schale und Saft)'),
-        (18, 0.5, 'dl', 'Olivenöl'),
-        (18, NULL, NULL, 'Tabasco'),
-        (18, 300, 'g', 'Pouletgeschnetzeltes'),
-        (18, 1, 'Bund', 'Schnittlauch oder Peterli'),
-        (18, NULL, NULL, 'Pfeffer'),
-        (18, NULL, NULL, 'Reibkäse (z. B. Sbrinz)');
+        (17, 250, 'g', 'Pasta (z. B. Spaghetti)'),
+        (17, NULL, NULL, 'Salz'),
+        (17, 1, NULL, 'Zitrone (Schale und Saft)'),
+        (17, 0.5, 'dl', 'Olivenöl'),
+        (17, NULL, NULL, 'Tabasco'),
+        (17, 300, 'g', 'Pouletgeschnetzeltes'),
+        (17, 1, 'Bund', 'Schnittlauch oder Peterli'),
+        (17, NULL, NULL, 'Pfeffer'),
+        (17, NULL, NULL, 'Reibkäse (z. B. Sbrinz)');
+
+/*Poulet Sweet Sour
+Poulet Sweet Sour
+
+40 min
+
+Richtiger Hit! Absolut frisch, schmeckt richtig gut und ist verhältnissmässig einfach zu kochen. Man braucht sich nur ans Rezept zu halten ;). Für 3-4 Portionen, mit Betty Bossi als Vorlage.
+Zutaten:
+
+    300 g Basmatireis (knapp 2 Tassen)
+    6 dl Wasser (doppelt so viel wie Reis in Tassen)
+    0.5 TL Salz
+    4 Bundzwiebeln
+    1 roter Peperoncini
+    1 Mango
+    Sesam-Öl zum Braten
+    350 g Pouletbrustwürfel
+    2 EL Maizena
+    2 dl Bouillon
+    3 EL Essig
+    1.5 EL Sojasauce
+    1 EL Zucker
+    3 EL Ketchup
+
+Poulet Sweet Sour
+Und so wird's gemacht:
+
+    Reis in einem Sieb unter kaltem Wasser spülen, bis das Wasser klar ist.
+    Reis mit Wasser aufkochen und zugedeckt bei kleinster Hitze ca. 15 Minuten quellen lassen, salzen.
+    Bundzwiebeln in Ringe schneiden, Grün beiseite stellen. Peperoncini entkernen und in Ringe schneiden. Mango schälen und würfeln.
+    Sesamöl in einer Pfanne erhitzen. Poulet portionenweise anbraten, herausnehmen und warm stellen.
+    Bundzwiebeln ohne Grün, Peperoncini und Mango in derselben Pfanne kurz stark rührbraten. Regelmässig umrühren.
+    2 EL Maizena mit 2dl Bouillon anrühren, mit 3 ELEssig, 1.5 EL Sojasauce, 1 EL Zucker und 3 EL Ketchup mischen und dann dazugiessen.
+    Aufkochen, Poulet wieder beigeben und ca. 5 Minuten auf tiefer Stufe köcheln lassen.
+    Mit Bundzwiebelgrün bestreuen und mit dem Reis servieren.*/
