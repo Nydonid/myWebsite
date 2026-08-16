@@ -2,11 +2,13 @@ import { useState } from "react"; // TODO only copy paste grok
 import InputRecipe from "../components/InputRecipe";
 import EditRecipe from "../components/EditRecipe";
 import { Recipe, Ingredient } from "../RecipeInterface";
+import { setToken } from "../auth";
+import { useAuth } from "../hooks/useAuth";
 
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+    const isLoggedIn = useAuth(); // false as soon as the JWT expires, no reload needed
     const [recipe, setRecipe] = useState<Recipe>({
         recipe_id: 0,
         title: "",
@@ -28,7 +30,7 @@ function Login() {
             const data = await res.json();
 
             if (data.token) {
-                localStorage.setItem("token", data.token);
+                setToken(data.token);
                 alert("Login successful!");
             } else {
                 alert("Login failed!");

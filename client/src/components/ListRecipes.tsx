@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { Recipe } from "../RecipeInterface";
 import DeleteRecipeButton from "./DeleteRecipeButton";
 import EditRecipe from "./EditRecipe";
+import { useAuth } from "../hooks/useAuth";
 
 const ListRecipes = () => {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const isLoggedIn = !!localStorage.getItem("token");
+    const isLoggedIn = useAuth(); // false as soon as the JWT expires, no reload needed
 
     const getRecipes = async () => {
         setIsLoading(true);

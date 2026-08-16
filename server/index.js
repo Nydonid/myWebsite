@@ -11,6 +11,10 @@ const jwt = require("jsonwebtoken");
 const api = express.Router();
 const port = 5000;
 
+// Single source of truth for the session lifetime: it is baked into the token's `exp` claim,
+// which the frontend reads (client/src/auth.ts) to drop the token from localStorage on expiry.
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "1h";
+
 //middleware
 app.use(express.json()); //req.body
 app.use(cors());
@@ -39,7 +43,7 @@ api.get("/test", async (req, res) => {
 api.post("/login", async (req, res) => {
     const { username, password } = req.body;
     if (username === process.env.FRONTEND_USER && password === process.env.FRONTEND_PASSWORD) { // Validate credentials (check against DB)
-        const token = jwt.sign({ username }, process.env.JWT_TOKEN, { expiresIn: "1h" });
+        const token = jwt.sign({ username }, process.env.JWT_TOKEN, { expiresIn: JWT_EXPIRES_IN });
         res.json({ token });
     } else {
         res.status(401).json({ error: "Invalid credentials" });

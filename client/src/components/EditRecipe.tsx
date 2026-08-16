@@ -1,6 +1,7 @@
 import React, {useState, Fragment, useEffect} from "react";
 import { Link } from "react-router-dom";
 import {Ingredient, Recipe} from "../RecipeInterface";
+import { clearToken, getToken } from "../auth";
 
 const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
     const [title, setTitle] = useState(recipe.title);
@@ -53,7 +54,12 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
             return;
         }
 
-        const token = localStorage.getItem("token");
+        const token = getToken(); // null (and removed from storage) once expired
+        if (!token) {
+            alert("Your session has expired, please log in again.");
+            window.location.reload();
+            return;
+        }
 
         try {
             const body = {
@@ -76,6 +82,7 @@ const EditRecipe = ({ recipe }: { recipe: Recipe }) => {
             });
 
             if (!res.ok) { // surface backend errors instead of silently reloading
+                if (res.status === 401 || res.status === 403) clearToken(); // token rejected by the server
                 const data = await res.json().catch(() => ({}));
                 throw new Error(data.error || `Request failed (${res.status})`);
             }
